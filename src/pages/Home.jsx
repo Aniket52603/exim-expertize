@@ -69,7 +69,7 @@ export default function Home() {
             drop-shadow-[0_3px_10px_rgba(0,0,0,0.65)]
             sm:text-6xl
             lg:text-7xl
-            xl:text-8xl
+            xl:text-7xl
           "
         >
           Clearing the path for{" "}
