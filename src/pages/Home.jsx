@@ -8,63 +8,173 @@ export default function Home() {
   return (
     <>
       {/* ================= HERO SECTION ================= */}
-     /* <section className="relative overflow-hidden bg-ink pt-36 pb-24 text-cream sm:pt-44 sm:pb-32 lg:pt-56 lg:pb-40">
+     {/* ================= HERO SECTION ================= */}
+<section className="relative min-h-[680px] overflow-hidden sm:min-h-[750px] lg:min-h-[875px]">
 
-        {/* Decorative Circle */}
-        <div className="pointer-events-none absolute -right-24 -top-24 h-96 w-96 rounded-full border-[28px] border-teal/20 float lg:h-[34rem] lg:w-[34rem] lg:-right-32 lg:-top-32" />
+  {/* ================= CARGO SHIP WALLPAPER ================= */}
+  <div className="absolute inset-0">
+    <img
+      src="/image.png"
+      alt="Cargo ship and containers at an international port"
+      className="h-full w-full object-cover object-center opacity-96"
+    />
+  </div>
 
-        {/* Decorative Glow */}
-        <div className="pointer-events-none absolute -bottom-32 -left-20 h-80 w-80 rounded-full bg-gold/10 blur-3xl lg:h-[28rem] lg:w-[28rem]" />
+  {/* ================= HERO CONTENT ================= */}
+  <div
+    className="
+      hero-content
+      relative
+      z-10
+      mx-auto
+      max-w-6xl
+      px-5
+      pt-36
+      lg:max-w-7xl
+      lg:px-10
+      lg:pt-56
+    "
+  >
 
-        {/* HERO CONTENT */}
-        <div className="hero-content relative mx-auto max-w-6xl px-5 lg:max-w-7xl lg:px-10">
+    {/* ================= HEADING ================= */}
+    <Reveal>
+      <div className="hero-text max-w-3xl lg:max-w-4xl">
 
-          {/* Heading */}
-          <Reveal>
-            <div className="hero-text max-w-3xl lg:max-w-4xl">
-              <p className="mb-4 inline-block rounded-full border border-gold/40 px-4 py-1.5 text-xs tracking-[.2em] text-gold2 lg:px-5 lg:py-2 lg:text-sm">
-                AHMEDABAD · SINCE 1980s
-              </p>
+        <p
+          className="
+            mb-4
+            inline-block
+            rounded-full
+            border
+            border-gold/40
+            px-4
+            py-1.5
+            text-xs
+            tracking-[.2em]
+            text-gold2
+            lg:px-5
+            lg:py-2
+            lg:text-sm
+          "
+        >
+          AHMEDABAD · SINCE 1980s
+        </p>
 
-              <h1 className="font-display text-4xl leading-tight sm:text-6xl lg:text-7xl xl:text-8xl">
-                Clearing the path for{" "}
-                <span className="sheen">Indian exporters</span> &amp; importers.
-              </h1>
-            </div>
-          </Reveal>
+        <h1
+          className="
+            font-display
+            text-4xl
+            leading-tight
+            text-white
+            drop-shadow-[0_3px_10px_rgba(0,0,0,0.65)]
+            sm:text-6xl
+            lg:text-7xl
+            xl:text-8xl
+          "
+        >
+          Clearing the path for{" "}
+          <span className="text-gold">
+            Indian exporters
+          </span>{" "}
+          &amp; importers.
+        </h1>
 
-          {/* Description */}
-          <Reveal delay={150}>
-            <div className="hero-text">
-              <p className="mt-6 max-w-xl text-base leading-relaxed text-cream/75 lg:mt-8 lg:max-w-2xl lg:text-xl">
-                Over 40 years of hands-on expertise in Foreign Trade Policy,
-                Customs, SVB, GST and FEMA — turning complex regulation into
-                practical, audit-ready compliance.
-              </p>
-            </div>
-          </Reveal>
+      </div>
+    </Reveal>
 
-          {/* Buttons */}
-          <Reveal delay={280}>
-            <div className="hero-text mt-9 flex flex-wrap gap-4 lg:mt-12 lg:ml-[-10px] lg:gap-6">
-              <Link
-                to="/services"
-                className="rounded-full bg-gold px-7 py-3.5 text-base font-semibold text-ink transition hover:bg-gold2 hover:shadow-[0_14px_30px_-12px_rgba(217,155,37,.9)] sm:text-lg lg:px-9 lg:py-4.5 lg:text-xl"
-              >
-                Explore services
-              </Link>
+    {/* ================= DESCRIPTION ================= */}
+    <Reveal delay={150}>
+      <div className="hero-text">
 
-              <Link
-                to="/contact"
-                className="rounded-full border border-cream/30 px-7 py-3.5 text-base font-semibold transition hover:border-gold hover:text-gold2 sm:text-lg lg:px-9 lg:py-4.5 lg:text-xl"
-              >
-                Request a consultation
-              </Link>
-            </div>
-          </Reveal>
-        </div>
-      </section>
+        <p
+          className="
+            mt-6
+            max-w-xl
+            text-base
+            leading-relaxed
+            text-white
+            drop-shadow-[0_2px_6px_rgba(0,0,0,0.8)]
+            lg:mt-8
+            lg:max-w-2xl
+            lg:text-xl
+          "
+        >
+          Over 40 years of hands-on expertise in Foreign Trade Policy,
+          Customs, SVB, GST and FEMA — turning complex regulation into
+          practical, audit-ready compliance.
+        </p>
 
+      </div>
+    </Reveal>
+
+    {/* ================= BUTTONS ================= */}
+    <Reveal delay={280}>
+      <div
+        className="
+          hero-text
+          mt-9
+          flex
+          flex-wrap
+          gap-4
+          lg:mt-12
+          lg:ml-[-10px]
+          lg:gap-6
+        "
+      >
+
+        <Link
+          to="/services"
+          className="
+            rounded-full
+            bg-gold
+            px-7
+            py-3.5
+            text-base
+            font-semibold
+            text-ink
+            transition
+            hover:bg-gold2
+            hover:shadow-[0_14px_30px_-12px_rgba(217,155,37,.9)]
+            sm:text-lg
+            lg:px-9
+            lg:py-4.5
+            lg:text-xl
+          "
+        >
+          Explore services
+        </Link>
+
+        <Link
+          to="/contact"
+          className="
+            rounded-full
+            border
+            border-white/70
+            bg-black/20
+            px-7
+            py-3.5
+            text-base
+            font-semibold
+            text-white
+            backdrop-blur-sm
+            transition
+            hover:border-gold
+            hover:text-gold2
+            sm:text-lg
+            lg:px-9
+            lg:py-4.5
+            lg:text-xl
+          "
+        >
+          Request a consultation
+        </Link>
+
+      </div>
+    </Reveal>
+
+  </div>
+
+</section>
 
       
 
