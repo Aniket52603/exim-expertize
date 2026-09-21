@@ -2,18 +2,27 @@
 @tailwind components;
 @tailwind utilities;
 
-/* ================= GLOBAL ================= */
+
+/* =========================================================
+   GLOBAL
+   ========================================================= */
 
 html {
   scroll-behavior: smooth;
+  overflow-x: hidden;
 }
 
 body {
+  margin: 0;
   background: #faf7f1;
   color: #1e3832;
+  overflow-x: hidden;
 }
 
-/* ================= HERO REVEAL ================= */
+
+/* =========================================================
+   HERO REVEAL
+   ========================================================= */
 
 .reveal {
   opacity: 0;
@@ -28,7 +37,10 @@ body {
   transform: none;
 }
 
-/* ================= FLOAT ANIMATION ================= */
+
+/* =========================================================
+   FLOAT ANIMATION
+   ========================================================= */
 
 @keyframes float {
   0%,
@@ -45,7 +57,10 @@ body {
   animation: float 6s ease-in-out infinite;
 }
 
-/* ================= GOLD TEXT SHEEN ================= */
+
+/* =========================================================
+   GOLD TEXT SHEEN
+   ========================================================= */
 
 @keyframes sheen {
   0% {
@@ -75,7 +90,10 @@ body {
   animation: sheen 5s linear infinite;
 }
 
-/* ================= CARD HOVER ================= */
+
+/* =========================================================
+   CARD HOVER
+   ========================================================= */
 
 .lift {
   transition:
@@ -90,7 +108,10 @@ body {
     0 18px 40px -18px rgba(30, 56, 50, 0.45);
 }
 
-/* ================= UNDERLINE ANIMATION ================= */
+
+/* =========================================================
+   UNDERLINE ANIMATION
+   ========================================================= */
 
 .ul-anim {
   position: relative;
@@ -117,7 +138,10 @@ body {
   width: 100%;
 }
 
-/* ================= SCROLLBAR ================= */
+
+/* =========================================================
+   SCROLLBAR
+   ========================================================= */
 
 ::-webkit-scrollbar {
   width: 9px;
@@ -126,4 +150,28 @@ body {
 ::-webkit-scrollbar-thumb {
   background: #1e3832;
   border-radius: 9px;
+}
+
+::-webkit-scrollbar-track {
+  background: #faf7f1;
+}
+
+
+/* =========================================================
+   RESPONSIVE SAFETY
+   ========================================================= */
+
+/*
+   Prevent any component from accidentally creating
+   horizontal overflow on smaller screens.
+*/
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+img {
+  max-width: 100%;
 }
