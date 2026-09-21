@@ -198,9 +198,3 @@ nav {
     transition-duration: 0.01ms !important;
   }
 }
-/* At the bottom of index.css */
-@media (min-width: 1024px) {
-  body {
-    zoom: 0.85; /* Adjust between 0.80 and 0.90 depending on preference */
-  }
-}
