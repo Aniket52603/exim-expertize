@@ -2,89 +2,22 @@
 @tailwind components;
 @tailwind utilities;
 
-
-/* =========================================================
-   GLOBAL RESET
-   ========================================================= */
-
-*,
-*::before,
-*::after {
-  box-sizing: border-box;
-}
+/* ================= GLOBAL ================= */
 
 html {
-  width: 100%;
-  max-width: 100%;
-  margin: 0;
-  padding: 0;
   scroll-behavior: smooth;
-  overflow-x: hidden;
 }
 
 body {
-  width: 100%;
-  max-width: 100%;
-  min-width: 0;
-  margin: 0;
-  padding: 0;
-
   background: #faf7f1;
   color: #1e3832;
-
-  overflow-x: hidden;
 }
 
-
-/* React root */
-
-#root {
-  width: 100%;
-  max-width: 100%;
-  min-width: 0;
-  margin: 0;
-  padding: 0;
-
-  overflow-x: hidden;
-}
-
-
-/* =========================================================
-   MEDIA / IMAGES
-   ========================================================= */
-
-img,
-video,
-svg,
-canvas {
-  display: block;
-  max-width: 100%;
-}
-
-
-/* Prevent long text from creating overflow */
-
-h1,
-h2,
-h3,
-h4,
-h5,
-h6,
-p {
-  max-width: 100%;
-  overflow-wrap: break-word;
-}
-
-
-/* =========================================================
-   HERO / REVEAL ANIMATION
-   ========================================================= */
+/* ================= HERO REVEAL ================= */
 
 .reveal {
   opacity: 0;
-
   transform: translateY(28px);
-
   transition:
     opacity 0.7s cubic-bezier(0.22, 1, 0.36, 1),
     transform 0.7s cubic-bezier(0.22, 1, 0.36, 1);
@@ -95,10 +28,25 @@ p {
   transform: none;
 }
 
+/* ================= HERO CONTENT POSITION ================= */
 
-/* =========================================================
-   FLOAT ANIMATION
-   ========================================================= */
+/*
+  Moves only the homepage hero content
+  slightly to the left on desktop.
+*/
+@media (min-width: 1024px) {
+  .hero-content {
+    position: relative;
+    left: -150px;
+  }
+
+  .hero-text {
+    position: relative;
+    left: 0;
+  }
+}
+
+/* ================= FLOAT ANIMATION ================= */
 
 @keyframes float {
   0%,
@@ -115,10 +63,7 @@ p {
   animation: float 6s ease-in-out infinite;
 }
 
-
-/* =========================================================
-   GOLD TEXT SHEEN
-   ========================================================= */
+/* ================= GOLD TEXT SHEEN ================= */
 
 @keyframes sheen {
   0% {
@@ -148,10 +93,7 @@ p {
   animation: sheen 5s linear infinite;
 }
 
-
-/* =========================================================
-   CARD HOVER
-   ========================================================= */
+/* ================= CARD HOVER ================= */
 
 .lift {
   transition:
@@ -166,10 +108,7 @@ p {
     0 18px 40px -18px rgba(30, 56, 50, 0.45);
 }
 
-
-/* =========================================================
-   UNDERLINE ANIMATION
-   ========================================================= */
+/* ================= UNDERLINE ANIMATION ================= */
 
 .ul-anim {
   position: relative;
@@ -183,12 +122,12 @@ p {
   left: 0;
   bottom: -4px;
 
-  width: 0;
   height: 2px;
+  width: 0;
 
   background: #d99b25;
 
-  transition: width 0.3s ease;
+  transition: width 0.3s;
 }
 
 .ul-anim:hover::after,
@@ -196,10 +135,7 @@ p {
   width: 100%;
 }
 
-
-/* =========================================================
-   SCROLLBAR
-   ========================================================= */
+/* ================= SCROLLBAR ================= */
 
 ::-webkit-scrollbar {
   width: 9px;
@@ -210,123 +146,26 @@ p {
   border-radius: 9px;
 }
 
-::-webkit-scrollbar-track {
-  background: #faf7f1;
-}
+/* ================= RESPONSIVE ================= */
 
-
-/* =========================================================
-   LINKS
-   ========================================================= */
-
-a {
-  color: inherit;
-  text-decoration: none;
-}
-
-
-/* =========================================================
-   BUTTONS
-   ========================================================= */
-
-button,
-a {
-  -webkit-tap-highlight-color: transparent;
-}
-
-
-/* =========================================================
-   RESPONSIVE SAFETY
-   ========================================================= */
-
-/*
-  Prevent accidental horizontal overflow from:
-  - large headings
-  - absolute elements
-  - images
-  - cards
-  - animations
-*/
-
-section,
-header,
-footer,
-main,
-nav {
-  max-width: 100%;
-}
-
-
-/* =========================================================
-   MOBILE
-   ========================================================= */
-
-@media (max-width: 639px) {
-
-  html,
-  body,
-  #root {
-    width: 100%;
-    max-width: 100%;
-    overflow-x: hidden;
-  }
-
-  h1,
-  h2,
-  h3 {
-    max-width: 100%;
-    overflow-wrap: break-word;
+/* Tablet */
+@media (min-width: 768px) and (max-width: 1023px) {
+  .hero-content {
+    left: 0;
   }
 }
 
-
-/* =========================================================
-   TABLET
-   ========================================================= */
-
-@media (min-width: 640px) and (max-width: 1023px) {
-
-  html,
-  body,
-  #root {
-    width: 100%;
-    max-width: 100%;
-    overflow-x: hidden;
+/* Mobile */
+@media (max-width: 767px) {
+  .hero-content {
+    left: 0;
   }
 }
-
-
-/* =========================================================
-   DESKTOP
-   ========================================================= */
+/* ================= HERO TEXT POSITION ================= */
 
 @media (min-width: 1024px) {
-
-  html,
-  body,
-  #root {
-    width: 100%;
-    max-width: 100%;
-    overflow-x: hidden;
-  }
-}
-
-
-/* =========================================================
-   REDUCED MOTION
-   ========================================================= */
-
-@media (prefers-reduced-motion: reduce) {
-
-  html {
-    scroll-behavior: auto;
-  }
-
-  *,
-  *::before,
-  *::after {
-    animation-duration: 0.01ms !important;
-    animation-iteration-count: 1 !important;
-    transition-duration: 0.01ms !important;
+  .hero-text {
+    position: relative;
+    left: -40px;
   }
 }
