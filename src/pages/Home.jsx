@@ -9,7 +9,7 @@ export default function Home() {
     <>
       {/* ================= HERO SECTION ================= */}
      {/* ================= HERO SECTION ================= */}
-<section className="relative min-h-[680px] w-full overflow-hidden sm:min-h-[720px] lg:min-h-[780px]">
+<section className="hero-section relative min-h-[680px] w-full overflow-hidden sm:min-h-[720px] lg:min-h-[780px]">
 
   {/* ================= CARGO SHIP WALLPAPER ================= */}
   <div className="absolute inset-0 h-full w-full">
@@ -51,7 +51,7 @@ export default function Home() {
         </p>
 
         <h1
-          className="
+          className="hero-title
             font-display
             text-4xl
             leading-[1.05]
@@ -79,7 +79,7 @@ export default function Home() {
       <div className="w-full">
 
         <p
-          className="
+          className="hero-description
             mt-6
             max-w-2xl
             text-base
@@ -102,7 +102,7 @@ export default function Home() {
     {/* ================= BUTTONS ================= */}
     <Reveal delay={280}>
       <div
-          className="
+          className="hero-actions
           mt-9
           flex
           flex-wrap

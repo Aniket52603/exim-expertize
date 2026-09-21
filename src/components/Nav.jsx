@@ -35,7 +35,7 @@ export default function Nav() {
         <Logo />
 
         {/* Desktop Navigation */}
-        <nav className="hidden items-center gap-12 md:flex lg:translate-x-[-100px] lg:gap-14">
+        <nav className="site-nav hidden items-center gap-12 md:flex lg:translate-x-[-100px] lg:gap-14">
           {NAV.map(([label, href]) => (
             <NavLink
               key={href}

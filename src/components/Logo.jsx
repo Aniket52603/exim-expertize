@@ -10,7 +10,7 @@ export default function Logo({ dark = false, className = "h-[80px]" }) {
         src="/logo.png"
         alt="Exim Expertize"
         className={
-          className +
+          "brand-logo " + className +
           " w-auto transition-transform duration-500"
         }
       />

@@ -183,6 +183,44 @@ nav {
   max-width: 100%;
 }
 
+/* Keep medium desktop viewports aligned with the wide desktop composition. */
+@media (min-width: 1024px) and (max-width: 1199px) {
+  header > div {
+    padding-left: 2rem;
+    padding-right: 2rem;
+  }
+
+  .brand-logo {
+    height: 64px;
+  }
+
+  .site-nav {
+    gap: 2.5rem;
+    transform: none;
+  }
+
+  .site-nav a {
+    font-size: 1rem;
+  }
+
+  .hero-section > div:last-child > div {
+    padding-top: 8rem;
+  }
+
+  .hero-title {
+    font-size: 3.75rem;
+  }
+
+  .hero-description {
+    max-width: 34rem;
+    font-size: 1rem;
+  }
+
+  .hero-actions {
+    margin-top: 2.25rem;
+  }
+}
+
 @media (prefers-reduced-motion: reduce) {
   html {
     scroll-behavior: auto;
