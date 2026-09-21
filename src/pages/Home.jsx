@@ -9,36 +9,24 @@ export default function Home() {
     <>
       {/* ================= HERO SECTION ================= */}
      {/* ================= HERO SECTION ================= */}
-<section className="relative min-h-[680px] overflow-hidden sm:min-h-[750px] lg:min-h-[875px]">
+<section className="relative min-h-[680px] w-full overflow-hidden sm:min-h-[720px] lg:min-h-[780px]">
 
   {/* ================= CARGO SHIP WALLPAPER ================= */}
-  <div className="absolute inset-0">
+  <div className="absolute inset-0 h-full w-full">
     <img
       src="/image.png"
       alt="Cargo ship and containers at an international port"
-      className="h-full w-full object-cover object-center opacity-100"
+      className="absolute inset-0 h-full w-full object-cover object-center"
     />
   </div>
 
   {/* ================= HERO CONTENT ================= */}
-  <div
-    className="
-      hero-content
-      relative
-      z-10
-      mx-auto
-      max-w-6xl
-      px-5
-      pt-36
-      lg:max-w-7xl
-      lg:px-10
-      lg:pt-56
-    "
-  >
+  <div className="relative z-10 w-full">
+    <div className="mx-auto w-full max-w-[1400px] px-6 pt-32 sm:px-10 sm:pt-40 lg:px-14 lg:pt-48 xl:px-16">
 
     {/* ================= HEADING ================= */}
     <Reveal>
-      <div className="hero-text max-w-3xl lg:max-w-4xl">
+      <div className="w-full max-w-4xl">
 
         <p
           className="
@@ -65,14 +53,15 @@ export default function Home() {
         <h1
           className="
             font-display
-            text-3xl
-            leading-tight
+            text-4xl
+            leading-[1.05]
             text-white
             [text-shadow:0_5px_18px_rgba(0,0,0,0.75)]
             
             sm:text-5xl
-            lg:text-6xl
-            xl:text-7xl
+            md:text-6xl
+            lg:text-7xl
+            xl:text-[5.2rem]
           "
         >
           Clearing the path for{" "}
@@ -87,18 +76,18 @@ export default function Home() {
 
     {/* ================= DESCRIPTION ================= */}
     <Reveal delay={150}>
-      <div className="hero-text">
+      <div className="w-full">
 
         <p
           className="
             mt-6
-            max-w-xl
+            max-w-2xl
             text-base
             leading-relaxed
             text-white
             [text-shadow:0_5px_18px_rgba(0,0,0,0.75)]
-            lg:mt-8
-            lg:max-w-2xl
+            sm:text-lg
+            lg:mt-7
             lg:text-xl
           "
         >
@@ -113,14 +102,12 @@ export default function Home() {
     {/* ================= BUTTONS ================= */}
     <Reveal delay={280}>
       <div
-        className="
-          hero-text
+          className="
           mt-9
           flex
           flex-wrap
           gap-4
           lg:mt-12
-          lg:ml-[-10px]
           lg:gap-6
         "
       >
@@ -175,7 +162,8 @@ export default function Home() {
       </div>
     </Reveal>
 
-  </div>
+      </div>
+    </div>
 
 </section>
 
