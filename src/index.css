@@ -183,13 +183,7 @@ nav {
   max-width: 100%;
 }
 
-@media (min-width: 768px) {
-  .vercel-scale-fix #root {
-    width: 125%;
-    max-width: none;
-    zoom: 0.8;
-  }
-}
+
 
 @media (prefers-reduced-motion: reduce) {
   html {
