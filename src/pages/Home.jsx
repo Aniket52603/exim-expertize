@@ -32,6 +32,7 @@ export default function Home() {
             lg:max-w-7xl
             lg:px-10
             lg:pt-56
+            lg:-translate-x-20
           "
         >
 
@@ -66,9 +67,9 @@ export default function Home() {
                   leading-tight
                   text-white
                   drop-shadow-[0_3px_10px_rgba(0,0,0,0.65)]
-                  sm:text-6xl
-                  lg:text-7xl
-                  xl:text-8xl
+                  sm:text-5xl
+                  lg:text-6xl
+                  xl:text-7xl
                 "
               >
                 Clearing the path for{" "}
