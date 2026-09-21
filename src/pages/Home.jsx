@@ -9,7 +9,7 @@ export default function Home() {
     <>
       {/* ================= HERO SECTION ================= */}
      {/* ================= HERO SECTION ================= */}
-<section className="hero-section relative min-h-[680px] w-full overflow-hidden sm:min-h-[720px] lg:min-h-[780px]">
+<section className="hero-section relative min-h-[640px] w-full overflow-hidden sm:min-h-[700px] lg:min-h-[750px]">
 
   {/* ================= CARGO SHIP WALLPAPER ================= */}
   <div className="absolute inset-0 h-full w-full">
@@ -60,8 +60,8 @@ export default function Home() {
             
             sm:text-5xl
             md:text-6xl
-            lg:text-7xl
-            xl:text-[5.2rem]
+            lg:text-6xl
+            xl:text-7xl
           "
         >
           Clearing the path for{" "}
@@ -81,13 +81,14 @@ export default function Home() {
         <p
           className="hero-description
             mt-6
-            max-w-2xl
+            max-w-xl
             text-base
             leading-relaxed
             text-white
             [text-shadow:0_5px_18px_rgba(0,0,0,0.75)]
             sm:text-lg
-            lg:mt-7
+            lg:mt-8
+            lg:max-w-2xl
             lg:text-xl
           "
         >
@@ -126,9 +127,9 @@ export default function Home() {
             hover:bg-gold2
             hover:[text-shadow:0_5px_18px_rgba(0,0,0,0.75)]
             sm:text-lg
-            lg:px-9
-            lg:py-4.5
-            lg:text-xl
+            lg:px-7
+            lg:py-3.5
+            lg:text-lg
           "
         >
           Explore services
@@ -151,9 +152,9 @@ export default function Home() {
             hover:border-gold
             hover:text-gold2
             sm:text-lg
-            lg:px-9
-            lg:py-4.5
-            lg:text-xl
+            lg:px-7
+            lg:py-3.5
+            lg:text-lg
           "
         >
           Request a consultation

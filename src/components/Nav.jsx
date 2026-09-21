@@ -35,7 +35,7 @@ export default function Nav() {
         <Logo />
 
         {/* Desktop Navigation */}
-        <nav className="site-nav hidden items-center gap-12 md:flex lg:translate-x-[-100px] lg:gap-14">
+        <nav className="site-nav hidden items-center gap-8 md:flex lg:gap-10">
           {NAV.map(([label, href]) => (
             <NavLink
               key={href}
@@ -43,7 +43,7 @@ export default function Nav() {
               end={href === "/"}
               onClick={() => setMenuOpen(false)}
               className={({ isActive }) =>
-                "relative text-[20px] font-bold tracking-wide " +
+                "relative text-[16px] font-bold tracking-wide " +
                 "text-ink/80 transition-all duration-300 " +
                 "hover:text-ink " +
                 "after:absolute after:-bottom-2 after:left-0 after:h-[2px] " +

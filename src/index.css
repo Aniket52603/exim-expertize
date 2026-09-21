@@ -183,15 +183,6 @@ nav {
   max-width: 100%;
 }
 
-/* Counter browser zoom on the narrower desktop viewport used by deployment. */
-@media (min-width: 1024px) and (max-width: 1199px) {
-  #root {
-    width: 125%;
-    max-width: none;
-    zoom: 0.8;
-  }
-}
-
 @media (prefers-reduced-motion: reduce) {
   html {
     scroll-behavior: auto;

@@ -1,6 +1,6 @@
 import { Link } from "react-router-dom";
 
-export default function Logo({ dark = false, className = "h-[80px]" }) {
+export default function Logo({ dark = false, className = "h-[64px]" }) {
   return (
     <Link
       to="/"
