@@ -217,7 +217,7 @@ export default function Home() {
                   {s.t}
                 </h3>
 
-                <p className="mt-3 text-base leading-relaxed text-black/70 lg:text-lg">
+                <p className="mt-3 text-lg leading-relaxed text-black lg:text-xl">
                   {s.d}
                 </p>
               </div>
