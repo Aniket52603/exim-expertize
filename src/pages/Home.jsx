@@ -43,6 +43,7 @@ export default function Home() {
               <p
                 className="
                   mb-4
+                  bg-white
                   inline-block
                   rounded-full
                   border
@@ -66,17 +67,20 @@ export default function Home() {
                   text-4xl
                   leading-tight
                   text-white
-                  drop-shadow-[0_3px_10px_rgba(0,0,0,0.65)]
                   sm:text-5xl
                   lg:text-6xl
                   xl:text-7xl
                 "
               >
-                Clearing the path for{" "}
+                <span className="drop-shadow-[0_3px_10px_rgba(0,0,0,0.65)]">
+                  Clearing the path for{" "}
+                </span>
                 <span className="text-gold">
                   Indian exporters
                 </span>{" "}
-                &amp; importers.
+                <span className="drop-shadow-[0_3px_10px_rgba(0,0,0,0.65)]">
+                  &amp; importers.
+                </span>
               </h1>
 
             </div>
