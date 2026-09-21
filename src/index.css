@@ -28,24 +28,6 @@ body {
   transform: none;
 }
 
-/* ================= HERO CONTENT POSITION ================= */
-
-/*
-  Moves only the homepage hero content
-  slightly to the left on desktop.
-*/
-@media (min-width: 1024px) {
-  .hero-content {
-    position: relative;
-    left: -150px;
-  }
-
-  .hero-text {
-    position: relative;
-    left: 0;
-  }
-}
-
 /* ================= FLOAT ANIMATION ================= */
 
 @keyframes float {
@@ -144,28 +126,4 @@ body {
 ::-webkit-scrollbar-thumb {
   background: #1e3832;
   border-radius: 9px;
-}
-
-/* ================= RESPONSIVE ================= */
-
-/* Tablet */
-@media (min-width: 768px) and (max-width: 1023px) {
-  .hero-content {
-    left: 0;
-  }
-}
-
-/* Mobile */
-@media (max-width: 767px) {
-  .hero-content {
-    left: 0;
-  }
-}
-/* ================= HERO TEXT POSITION ================= */
-
-@media (min-width: 1024px) {
-  .hero-text {
-    position: relative;
-    left: -40px;
-  }
 }

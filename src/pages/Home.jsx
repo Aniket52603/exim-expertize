@@ -9,6 +9,7 @@ export default function Home() {
     <>
       {/* ================= HERO SECTION ================= */}
      {/* ================= HERO SECTION ================= */}
+{/* ================= HERO SECTION ================= */}
 <section className="relative min-h-[680px] overflow-hidden sm:min-h-[750px] lg:min-h-[875px]">
 
   {/* ================= CARGO SHIP WALLPAPER ================= */}
@@ -23,7 +24,6 @@ export default function Home() {
   {/* ================= HERO CONTENT ================= */}
   <div
     className="
-      hero-content
       relative
       z-10
       mx-auto
@@ -38,20 +38,20 @@ export default function Home() {
 
     {/* ================= HEADING ================= */}
     <Reveal>
-      <div className="hero-text max-w-3xl lg:max-w-4xl">
+      <div className="max-w-3xl lg:max-w-4xl">
 
         <p
           className="
-            bg-white/90
-            font-bold
             mb-4
             inline-block
             rounded-full
             border
             border-gold/40
+            bg-white/90
             px-4
             py-1.5
             text-xs
+            font-bold
             tracking-[.2em]
             text-gold2
             lg:px-5
@@ -69,7 +69,6 @@ export default function Home() {
             leading-tight
             text-white
             [text-shadow:0_5px_18px_rgba(0,0,0,0.75)]
-            
             sm:text-5xl
             lg:text-6xl
             xl:text-7xl
@@ -87,7 +86,7 @@ export default function Home() {
 
     {/* ================= DESCRIPTION ================= */}
     <Reveal delay={150}>
-      <div className="hero-text">
+      <div>
 
         <p
           className="
@@ -114,13 +113,11 @@ export default function Home() {
     <Reveal delay={280}>
       <div
         className="
-          hero-text
           mt-9
           flex
           flex-wrap
           gap-4
           lg:mt-12
-          lg:ml-[-10px]
           lg:gap-6
         "
       >
