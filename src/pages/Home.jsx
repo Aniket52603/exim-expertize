@@ -56,6 +56,7 @@ export default function Home() {
                   lg:px-5
                   lg:py-2
                   lg:text-sm
+                  font-bold
                 "
               >
                 AHMEDABAD · SINCE 1980s
@@ -189,7 +190,7 @@ export default function Home() {
               delay={i * 90}
               className="bg-cream px-6 py-7 text-center lg:px-8 lg:py-10"
             >
-              <p className="font-display text-2xl text-gold lg:text-3xl">
+              <p className="font-display text-2xl text-gold font-bold lg:text-3xl">
                 {a}
               </p>
 
@@ -217,7 +218,7 @@ export default function Home() {
                   {s.t}
                 </h3>
 
-                <p className="mt-3 text-lg leading-relaxed text-black lg:text-xl">
+                <p className="mt-3 text-base leading-relaxed text-black/70 lg:text-lg">
                   {s.d}
                 </p>
               </div>
