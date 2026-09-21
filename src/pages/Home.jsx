@@ -9,170 +9,205 @@ export default function Home() {
     <div className="w-full overflow-x-hidden">
 
       {/* ================= HERO SECTION ================= */}
-      <section className="relative min-h-[680px] overflow-hidden sm:min-h-[750px] lg:min-h-[875px]">
+      {/* ================= HERO SECTION ================= */}
+<section className="relative min-h-[680px] w-full overflow-hidden sm:min-h-[720px] lg:min-h-[780px]">
 
-        {/* ================= CARGO SHIP WALLPAPER ================= */}
-        <div className="absolute inset-0 h-full w-full">
-          <img
-            src="/image.png"
-            alt="Cargo ship and containers at an international port"
-            className="h-full w-full object-cover object-center"
-          />
-        </div>
+  {/* ================= CARGO SHIP WALLPAPER ================= */}
+  <div className="absolute inset-0 h-full w-full">
+    <img
+      src="/image.png"
+      alt="Cargo ship and containers at an international port"
+      className="absolute inset-0 h-full w-full object-cover object-center"
+    />
+  </div>
 
-        {/* ================= HERO OVERLAYS ================= */}
-        {/* Left-to-right dark overlay for text readability */}
-        <div className="absolute inset-0 bg-gradient-to-r from-black/70 via-black/30 to-transparent" />
+  {/* ================= HERO OVERLAYS ================= */}
 
-        {/* Bottom-to-top dark overlay */}
-        <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent" />
+  {/* Left dark gradient */}
+  <div className="absolute inset-0 bg-gradient-to-r from-black/75 via-black/35 to-transparent" />
 
-        {/* ================= HERO CONTENT ================= */}
-        <div className="relative z-10 mx-auto w-full max-w-7xl px-5 pt-36 sm:px-8 lg:px-10 lg:pt-56">
+  {/* Bottom dark gradient */}
+  <div className="absolute inset-0 bg-gradient-to-t from-black/65 via-transparent to-transparent" />
 
-          {/* ================= HEADING ================= */}
-          <Reveal>
-            <div className="max-w-3xl lg:max-w-4xl">
 
-              {/* Location Badge */}
-              <p
-                className="
-                  mb-4
-                  inline-block
-                  rounded-full
-                  border
-                  border-gold/40
-                  bg-white/90
-                  px-4
-                  py-1.5
-                  text-xs
-                  font-bold
-                  tracking-[.2em]
-                  text-gold2
-                  lg:px-5
-                  lg:py-2
-                  lg:text-sm
-                "
-              >
-                AHMEDABAD · SINCE 1980s
-              </p>
+  {/* ================= HERO CONTENT ================= */}
+  <div className="relative z-10 w-full">
 
-              {/* Main Heading */}
-              <h1
-                className="
-                  font-display
-                  text-3xl
-                  leading-tight
-                  text-white
-                  [text-shadow:0_5px_18px_rgba(0,0,0,0.75)]
-                  sm:text-5xl
-                  lg:text-6xl
-                  xl:text-7xl
-                "
-              >
-                Clearing the path for{" "}
-                <span className="text-gold [text-shadow:none]">
-                  Indian exporters
-                </span>{" "}
-                &amp; importers.
-              </h1>
+    <div
+      className="
+        mx-auto
+        w-full
+        max-w-[1400px]
+        px-6
+        pt-32
+        sm:px-10
+        sm:pt-40
+        lg:px-14
+        lg:pt-48
+        xl:px-16
+      "
+    >
 
-            </div>
-          </Reveal>
+      {/* ================= HEADING ================= */}
+      <Reveal>
 
-          {/* ================= DESCRIPTION ================= */}
-          <Reveal delay={150}>
-            <div className="w-full">
+        <div className="w-full max-w-4xl">
 
-              <p
-                className="
-                  mt-6
-                  max-w-xl
-                  text-base
-                  leading-relaxed
-                  text-white
-                  [text-shadow:0_5px_18px_rgba(0,0,0,0.75)]
-                  lg:mt-8
-                  lg:max-w-2xl
-                  lg:text-xl
-                "
-              >
-                Over 40 years of hands-on expertise in Foreign Trade Policy,
-                Customs, SVB, GST and FEMA — turning complex regulation into
-                practical, audit-ready compliance.
-              </p>
+          {/* Location Badge */}
+          <p
+            className="
+              mb-5
+              inline-block
+              rounded-full
+              border
+              border-gold/40
+              bg-white/90
+              px-4
+              py-1.5
+              text-xs
+              font-bold
+              tracking-[0.2em]
+              text-gold2
+              sm:px-5
+              sm:py-2
+              sm:text-sm
+            "
+          >
+            AHMEDABAD · SINCE 1980s
+          </p>
 
-            </div>
-          </Reveal>
 
-          {/* ================= BUTTONS ================= */}
-          <Reveal delay={280}>
-            <div
-              className="
-                mt-9
-                flex
-                w-full
-                flex-wrap
-                gap-4
-                lg:mt-12
-                lg:gap-6
-              "
-            >
+          {/* Main Heading */}
+          <h1
+            className="
+              font-display
+              text-4xl
+              leading-[1.05]
+              text-white
+              [text-shadow:0_5px_18px_rgba(0,0,0,0.75)]
+              sm:text-5xl
+              md:text-6xl
+              lg:text-7xl
+              xl:text-[5.2rem]
+            "
+          >
+            Clearing the path for{" "}
 
-              {/* Explore Services */}
-              <Link
-                to="/services"
-                className="
-                  rounded-full
-                  bg-gold
-                  px-7
-                  py-3.5
-                  text-base
-                  font-semibold
-                  text-ink
-                  transition
-                  hover:bg-gold2
-                  hover:[text-shadow:0_5px_18px_rgba(0,0,0,0.75)]
-                  sm:text-lg
-                  lg:px-9
-                  lg:py-4.5
-                  lg:text-xl
-                "
-              >
-                Explore services
-              </Link>
+            <span className="text-gold [text-shadow:none]">
+              Indian exporters
+            </span>{" "}
 
-              {/* Consultation */}
-              <Link
-                to="/contact"
-                className="
-                  rounded-full
-                  border
-                  border-white/70
-                  bg-black/20
-                  px-7
-                  py-3.5
-                  text-base
-                  font-semibold
-                  text-white
-                  backdrop-blur-sm
-                  transition
-                  hover:border-gold
-                  hover:text-gold2
-                  sm:text-lg
-                  lg:px-9
-                  lg:py-4.5
-                  lg:text-xl
-                "
-              >
-                Request a consultation
-              </Link>
-
-            </div>
-          </Reveal>
+            &amp; importers.
+          </h1>
 
         </div>
-      </section>
+
+      </Reveal>
+
+
+      {/* ================= DESCRIPTION ================= */}
+      <Reveal delay={150}>
+
+        <div className="w-full">
+
+          <p
+            className="
+              mt-6
+              max-w-2xl
+              text-base
+              leading-relaxed
+              text-white
+              [text-shadow:0_5px_18px_rgba(0,0,0,0.75)]
+              sm:text-lg
+              lg:mt-7
+              lg:text-xl
+            "
+          >
+            Over 40 years of hands-on expertise in Foreign Trade Policy,
+            Customs, SVB, GST and FEMA — turning complex regulation into
+            practical, audit-ready compliance.
+          </p>
+
+        </div>
+
+      </Reveal>
+
+
+      {/* ================= BUTTONS ================= */}
+      <Reveal delay={280}>
+
+        <div
+          className="
+            mt-8
+            flex
+            w-full
+            flex-wrap
+            gap-4
+            lg:mt-10
+            lg:gap-5
+          "
+        >
+
+          {/* Explore Services */}
+          <Link
+            to="/services"
+            className="
+              rounded-full
+              bg-gold
+              px-7
+              py-3
+              text-base
+              font-semibold
+              text-ink
+              transition
+              hover:bg-gold2
+              sm:px-8
+              sm:py-3.5
+              sm:text-lg
+              lg:px-9
+              lg:py-4
+            "
+          >
+            Explore services
+          </Link>
+
+
+          {/* Consultation */}
+          <Link
+            to="/contact"
+            className="
+              rounded-full
+              border
+              border-white/70
+              bg-black/20
+              px-7
+              py-3
+              text-base
+              font-semibold
+              text-white
+              backdrop-blur-sm
+              transition
+              hover:border-gold
+              hover:text-gold2
+              sm:px-8
+              sm:py-3.5
+              sm:text-lg
+              lg:px-9
+              lg:py-4
+            "
+          >
+            Request a consultation
+          </Link>
+
+        </div>
+
+      </Reveal>
+
+    </div>
+
+  </div>
+
+</section>
 
       {/* ================= HIGHLIGHTS ================= */}
       <section

@@ -4,29 +4,87 @@
 
 
 /* =========================================================
-   GLOBAL
+   GLOBAL RESET
    ========================================================= */
 
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
 html {
+  width: 100%;
+  max-width: 100%;
+  margin: 0;
+  padding: 0;
   scroll-behavior: smooth;
   overflow-x: hidden;
 }
 
 body {
+  width: 100%;
+  max-width: 100%;
+  min-width: 0;
   margin: 0;
+  padding: 0;
+
   background: #faf7f1;
   color: #1e3832;
+
+  overflow-x: hidden;
+}
+
+
+/* React root */
+
+#root {
+  width: 100%;
+  max-width: 100%;
+  min-width: 0;
+  margin: 0;
+  padding: 0;
+
   overflow-x: hidden;
 }
 
 
 /* =========================================================
-   HERO REVEAL
+   MEDIA / IMAGES
+   ========================================================= */
+
+img,
+video,
+svg,
+canvas {
+  display: block;
+  max-width: 100%;
+}
+
+
+/* Prevent long text from creating overflow */
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p {
+  max-width: 100%;
+  overflow-wrap: break-word;
+}
+
+
+/* =========================================================
+   HERO / REVEAL ANIMATION
    ========================================================= */
 
 .reveal {
   opacity: 0;
+
   transform: translateY(28px);
+
   transition:
     opacity 0.7s cubic-bezier(0.22, 1, 0.36, 1),
     transform 0.7s cubic-bezier(0.22, 1, 0.36, 1);
@@ -125,12 +183,12 @@ body {
   left: 0;
   bottom: -4px;
 
-  height: 2px;
   width: 0;
+  height: 2px;
 
   background: #d99b25;
 
-  transition: width 0.3s;
+  transition: width 0.3s ease;
 }
 
 .ul-anim:hover::after,
@@ -158,20 +216,117 @@ body {
 
 
 /* =========================================================
+   LINKS
+   ========================================================= */
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+
+/* =========================================================
+   BUTTONS
+   ========================================================= */
+
+button,
+a {
+  -webkit-tap-highlight-color: transparent;
+}
+
+
+/* =========================================================
    RESPONSIVE SAFETY
    ========================================================= */
 
 /*
-   Prevent any component from accidentally creating
-   horizontal overflow on smaller screens.
+  Prevent accidental horizontal overflow from:
+  - large headings
+  - absolute elements
+  - images
+  - cards
+  - animations
 */
 
-*,
-*::before,
-*::after {
-  box-sizing: border-box;
+section,
+header,
+footer,
+main,
+nav {
+  max-width: 100%;
 }
 
-img {
-  max-width: 100%;
+
+/* =========================================================
+   MOBILE
+   ========================================================= */
+
+@media (max-width: 639px) {
+
+  html,
+  body,
+  #root {
+    width: 100%;
+    max-width: 100%;
+    overflow-x: hidden;
+  }
+
+  h1,
+  h2,
+  h3 {
+    max-width: 100%;
+    overflow-wrap: break-word;
+  }
+}
+
+
+/* =========================================================
+   TABLET
+   ========================================================= */
+
+@media (min-width: 640px) and (max-width: 1023px) {
+
+  html,
+  body,
+  #root {
+    width: 100%;
+    max-width: 100%;
+    overflow-x: hidden;
+  }
+}
+
+
+/* =========================================================
+   DESKTOP
+   ========================================================= */
+
+@media (min-width: 1024px) {
+
+  html,
+  body,
+  #root {
+    width: 100%;
+    max-width: 100%;
+    overflow-x: hidden;
+  }
+}
+
+
+/* =========================================================
+   REDUCED MOTION
+   ========================================================= */
+
+@media (prefers-reduced-motion: reduce) {
+
+  html {
+    scroll-behavior: auto;
+  }
+
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
 }
