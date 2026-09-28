@@ -1,73 +1,74 @@
+
+import { Link } from "react-router-dom";
+
 const AboutUs = () => {
   return (
     <section className="bg-[#f8f6f0] px-5 py-16 sm:py-20 lg:py-24">
-  <div className="mx-auto max-w-7xl">
+      <div className="mx-auto max-w-7xl">
 
-    {/* ================= ABOUT HEADING ================= */}
-    <div className="mb-10 flex items-center justify-center gap-4 sm:mb-12 sm:gap-6 lg:mb-14 lg:gap-8">
+        {/* ABOUT HEADING */}
+        <div className="mb-10 flex items-center justify-center gap-4 sm:mb-12 sm:gap-6 lg:mb-14 lg:gap-8">
+          <span className="h-[2px] w-12 bg-ink sm:w-20 lg:w-36" />
 
-      <span className="h-[2px] w-12 bg-ink sm:w-20 lg:w-36"></span>
+          <h2 className="whitespace-nowrap font-display text-3xl text-ink sm:text-4xl md:text-5xl lg:text-6xl">
+            About Exim Expertize
+          </h2>
 
-      <h2 className="whitespace-nowrap font-display text-3xl text-ink sm:text-4xl md:text-5xl lg:text-6xl">
-        About Exim Expertize
-      </h2>
+          <span className="h-[2px] w-12 bg-ink sm:w-20 lg:w-36" />
+        </div>
 
-      <span className="h-[2px] w-12 bg-ink sm:w-20 lg:w-36"></span>
+        {/* SHORT INTRODUCTION */}
+        <div className="mx-auto max-w-8xl rounded-3xl bg-white px-7 py-9 shadow-[0_10px_35px_rgba(0,0,0,0.08)] sm:px-10 sm:py-11 lg:px-14 lg:py-12">
 
-    </div>
+          <div className="text-lg leading-relaxed text-black/80 lg:text-xl">
 
-    {/* ================= WHITE TEXT CARD ================= */}
-    <div className="mx-auto max-w-8xl rounded-3xl bg-white px-7 py-9 shadow-[0_10px_35px_rgba(0,0,0,0.08)] sm:px-10 sm:py-11 lg:px-14 lg:py-12">
+            <p className="mb-5">
+              <strong className="text-ink">
+                Exim Expertize
+              </strong>{" "}
+              is an export-import consultancy based in Ahmedabad,
+              established in 1989. We provide professional advice
+              and guidance to exporters, importers and manufacturers
+              dealing with India's international trade procedures
+              and regulatory requirements.
+            </p>
 
-      <div className="text-xl leading-9 text-black/90 sm:text-2xl sm:leading-10 lg:text-[22px] lg:leading-9">
+            <p className="mb-5">
+              Guided by the experience of our founder and mentor,{" "}
+              <strong className="text-ink">
+                Babu Ezhumavil
+              </strong>
+              , we assist businesses with EXIM documentation,
+              authorisations, DGFT and ICEGATE procedures, Customs
+              matters and various export-import schemes.
+            </p>
 
-        <p className="mb-6">
-          Welcome to{" "}
-          <strong className="text-ink">
-            Exim Expertize
-          </strong>
-          , a specialised advisory firm supporting exporters,
-          importers and businesses navigating India's complex
-          international trade regulations.
-        </p>
+            <p>
+              Our approach combines practical industry experience
+              with a commitment to{" "}
+              <strong className="text-ink">
+                humility, sincerity and honesty
+              </strong>
+              , helping businesses navigate complex trade procedures
+              with greater clarity and confidence.
+            </p>
 
-        <p className="mb-6">
-          With over{" "}
-          <strong className="text-ink">
-            40 years of practical experience
-          </strong>
-          , we provide guidance across Foreign Trade Policy,
-          Customs, SVB, GST, FEMA and other areas of EXIM compliance.
-          Our approach is focused on providing clear, practical and
-          commercially relevant solutions.
-        </p>
+          </div>
 
-        <p className="mb-6">
-          We assist businesses with regulatory procedures,
-          authorisations, registrations, documentation, compliance
-          requirements and post-approval matters. From Advance
-          Authorisation and EPCG to AEO, MOOWR, SEZ, EOU and
-          duty-related matters, our objective is to simplify
-          complex processes and help businesses move forward
-          with confidence.
-        </p>
+          {/* READ MORE */}
+          <div className="mt-8">
+            <Link
+              to="/about"
+              className="inline-flex items-center gap-2 rounded-full bg-gold px-7 py-3 font-semibold text-black transition hover:bg-gold2 sm:px-8"
+            >
+              Discover Our Story
+              <span aria-hidden="true">→</span>
+            </Link>
+          </div>
 
-        <p>
-          At Exim Expertize, we believe in{" "}
-          <strong className="text-ink">
-            humility, sincerity and honesty
-          </strong>
-          . We combine regulatory knowledge with practical
-          experience to deliver dependable advisory support
-          tailored to each client's requirements.
-        </p>
-
+        </div>
       </div>
-
-    </div>
-
-  </div>
-</section>
+    </section>
   );
 };
 

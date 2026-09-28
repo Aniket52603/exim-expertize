@@ -210,17 +210,21 @@ export default function Home() {
           Specialised EXIM advisory
         </Title>
 
-        <div className="grid gap-6 sm:grid-cols-2 lg:grid-cols-3 lg:gap-8">
+        <div className="grid gap-6 md:grid-cols-2 lg:gap-8">
           {SERVICES.slice(0, 6).map((s, i) => (
-            <Reveal key={s.t} delay={i * 80}>
-              <div className="lift h-full rounded-2xl border border-ink/10 bg-white p-8 lg:p-10">
-                <h3 className="font-display text-2xl text-ink lg:text-[2rem]">
-                  {s.t}
-                </h3>
+            <Reveal key={s.t} delay={i * 60}>
+              <div className="lift flex h-full gap-7 rounded-2xl border border-ink/10 bg-white p-10 lg:p-12">
+                <span className="mt-1 h-8 w-1 shrink-0 rounded bg-gold" />
 
-                <p className="mt-3 text-base leading-relaxed text-black/70 lg:text-lg">
-                  {s.d}
-                </p>
+                <div>
+                  <h3 className="font-display text-3xl text-ink lg:text-[2.125rem]">
+                    {s.t}
+                  </h3>
+
+                  <p className="mt-3 text-lg leading-relaxed text-black lg:text-xl">
+                    {s.d}
+                  </p>
+                </div>
               </div>
             </Reveal>
           ))}

@@ -1,3 +1,4 @@
+
 import { useEffect, useState } from "react";
 import { Link, NavLink } from "react-router-dom";
 import Logo from "./Logo.jsx";
@@ -24,8 +25,8 @@ export default function Nav() {
       className={
         "fixed inset-x-0 top-0 z-50 bg-white transition-all duration-500 " +
         (scrolled
-  ? "shadow-[0_1px_24px_-8px_rgba(30,56,50,.4)] py-2"
-  : "py-3")
+          ? "shadow-[0_1px_24px_-8px_rgba(30,56,50,.4)] py-2"
+          : "py-3")
       }
     >
       {/* Navbar Container */}
@@ -49,9 +50,7 @@ export default function Nav() {
                 "after:absolute after:-bottom-2 after:left-0 after:h-[2px] " +
                 "after:w-0 after:bg-gold after:transition-all after:duration-300 " +
                 "hover:after:w-full " +
-                (isActive
-                  ? "text-ink after:w-full"
-                  : "")
+                (isActive ? "text-ink after:w-full" : "")
               }
             >
               {label}
@@ -61,17 +60,21 @@ export default function Nav() {
 
         {/* Mobile Menu Button */}
         <button
+          type="button"
           onClick={() => setMenuOpen((v) => !v)}
           className="p-2 md:hidden"
-          aria-label="Menu"
+          aria-label={menuOpen ? "Close menu" : "Open menu"}
+          aria-expanded={menuOpen}
         >
           <svg
             width="26"
             height="26"
             viewBox="0 0 24 24"
+            fill="none"
             stroke="#1E3832"
             strokeWidth="2"
             strokeLinecap="round"
+            strokeLinejoin="round"
           >
             {menuOpen ? (
               <g>
@@ -91,18 +94,26 @@ export default function Nav() {
 
       {/* Mobile Navigation */}
       {menuOpen && (
-        <div className="mx-5 mt-3 rounded-2xl bg-white p-4 shadow-xl md:hidden">
+        <nav
+          className="mx-5 mt-3 rounded-2xl bg-white p-4 shadow-xl md:hidden"
+          aria-label="Mobile navigation"
+        >
           {NAV.map(([label, href]) => (
-            <Link
+            <NavLink
               key={href}
               to={href}
+              end={href === "/"}
               onClick={() => setMenuOpen(false)}
-              className="block border-b border-ink/10 py-3 text-base font-semibold text-ink last:border-0"
+              className={({ isActive }) =>
+                "block border-b border-ink/10 py-3 text-base font-semibold " +
+                "last:border-0 transition-colors " +
+                (isActive ? "text-gold" : "text-ink hover:text-gold")
+              }
             >
               {label}
-            </Link>
+            </NavLink>
           ))}
-        </div>
+        </nav>
       )}
     </header>
   );
