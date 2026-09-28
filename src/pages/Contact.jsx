@@ -4,7 +4,7 @@ import Title from "../components/Title.jsx";
 import { CONTACT } from "../data.js";
 
 const inputClass =
-  "w-full rounded-lg border border-ink/15 bg-white px-4 py-3.5 text-lg outline-none transition focus:border-gold focus:ring-2 focus:ring-gold/30 lg:px-5 lg:py-4.5 lg:text-xl";
+  "w-full rounded-lg border border-ink/15 bg-white px-4 py-3 text-base outline-none transition focus:border-gold focus:ring-2 focus:ring-gold/30 sm:py-3.5 sm:text-lg lg:px-5 lg:py-4.5 lg:text-xl";
 
 export default function Contact() {
   const [form, setForm] = useState({
@@ -95,7 +95,7 @@ export default function Contact() {
     "Hello Exim Expertize, I would like to know more about your EXIM advisory services.";
 
   return (
-    <section className="mx-auto max-w-6xl px-5 pt-36 pb-24 lg:max-w-7xl lg:px-10 lg:pt-48 lg:pb-32">
+    <section className="mx-auto max-w-6xl px-4 pt-28 pb-14 sm:px-5 sm:pt-36 sm:pb-24 lg:max-w-7xl lg:px-10 lg:pt-48 lg:pb-32">
 
       {/* ================= PAGE TITLE ================= */}
       <Title kicker="GET IN TOUCH">
@@ -103,24 +103,24 @@ export default function Contact() {
       </Title>
 
       {/* ================= CONTACT GRID ================= */}
-      <div className="grid gap-10 lg:grid-cols-2 lg:gap-14">
+      <div className="grid gap-6 sm:gap-10 lg:grid-cols-2 lg:gap-14">
 
         {/* =====================================================
             LEFT SIDE - CONTACT DETAILS
         ====================================================== */}
         <Reveal>
-          <div className="space-y-9 rounded-2xl bg-ink p-11 text-cream lg:p-14">
+          <div className="space-y-5 rounded-xl bg-ink p-6 text-cream sm:space-y-7 sm:rounded-2xl sm:p-9 lg:space-y-9 lg:p-14">
 
             {rows.map(({ label, value, href }) => (
               <div
                 key={label}
-                className="border-b border-cream/15 pb-5 last:border-0"
+                className="border-b border-cream/15 pb-4 last:border-0 last:pb-0 sm:pb-5"
               >
-                <p className="text-sm tracking-[.2em] text-gold lg:text-base">
+                <p className="text-xs tracking-[.2em] text-gold sm:text-sm lg:text-base">
                   {label.toUpperCase()}
                 </p>
 
-                <p className="mt-1.5 text-xl leading-relaxed text-cream/85 lg:text-[1.375rem]">
+                <p className="mt-1 break-words text-base leading-relaxed text-cream/85 sm:mt-1.5 sm:text-xl lg:text-[1.375rem]">
                   {href ? (
                     <a href={href} className="transition hover:text-gold">
                       {value}
@@ -132,7 +132,7 @@ export default function Contact() {
               </div>
             ))}
 
-            <p className="text-lg text-cream/60 lg:text-xl">
+            <p className="text-[15px] text-cream/60 sm:text-lg lg:text-xl">
               Working hours: Mon–Sat, 10:00 AM – 7:00 PM IST
             </p>
 
@@ -144,15 +144,15 @@ export default function Contact() {
             RIGHT SIDE - CONTACT FORM
         ====================================================== */}
         <Reveal delay={140}>
-          <div className="rounded-2xl border border-ink/10 bg-white p-11 lg:p-14">
+          <div className="rounded-xl border border-ink/10 bg-white p-6 sm:rounded-2xl sm:p-9 lg:p-14">
 
-            <h3 className="font-display text-3xl lg:text-[2.125rem]">
+            <h3 className="font-display text-2xl sm:text-3xl lg:text-[2.125rem]">
               Send an enquiry
             </h3>
 
             <form
               onSubmit={handleSend}
-              className="mt-7 space-y-6"
+              className="mt-5 space-y-4 sm:mt-7 sm:space-y-6"
             >
 
               {/* ================= NAME ================= */}
@@ -193,7 +193,7 @@ export default function Contact() {
 
               {/* ================= MESSAGE ================= */}
               <textarea
-                rows="5"
+                rows="4"
                 name="message"
                 className={inputClass}
                 placeholder="Briefly describe your requirement"
@@ -235,8 +235,7 @@ export default function Contact() {
 
 
               {/* ================= WHATSAPP BUTTON ================= */}
-              <a
-                href={`https://wa.me/${CONTACT.whatsapp}?text=${encodeURIComponent(
+              <a href={`https://wa.me/${CONTACT.whatsapp}?text=${encodeURIComponent(
                   whatsappMessage
                 )}`}
                 target="_blank"
@@ -246,16 +245,19 @@ export default function Contact() {
                   w-full
                   items-center
                   justify-center
-                  gap-3
+                  gap-2.5
                   rounded-full
                   bg-[#25D366]
                   py-3.5
+                  text-[15px]
                   font-semibold
                   text-white
                   transition-all
                   duration-300
                   hover:bg-[#20bd5a]
                   hover:shadow-lg
+                  sm:gap-3
+                  sm:text-base
                   lg:py-4
                   lg:text-lg
                 "
@@ -265,7 +267,7 @@ export default function Contact() {
                   xmlns="http://www.w3.org/2000/svg"
                   viewBox="0 0 24 24"
                   fill="currentColor"
-                  className="h-6 w-6"
+                  className="h-5 w-5 shrink-0 sm:h-6 sm:w-6"
                 >
                   <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.149.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.372-.025-.521-.075-.149-.669-1.611-.916-2.206-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.848 1.213 3.047.149.198 2.095 3.2 5.076 4.487.709.306 1.262.489 1.694.626.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413z" />
 
