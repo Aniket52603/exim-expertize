@@ -216,23 +216,23 @@ export default function Home() {
       <AboutUs />
 
       {/* ================= SERVICES ================= */}
-      <section className="mx-auto max-w-6xl px-5 py-16 sm:py-24 lg:max-w-7xl lg:px-10 lg:py-32">
+      <section className="mx-auto max-w-6xl px-4 py-12 sm:px-5 sm:py-20 lg:max-w-7xl lg:px-10 lg:py-32">
         <Title kicker="WHAT WE DO">
           Specialised EXIM advisory
         </Title>
 
-        <div className="grid gap-6 md:grid-cols-2 lg:gap-8">
+        <div className="grid gap-3 sm:gap-5 md:grid-cols-2 lg:gap-8">
           {SERVICES.slice(0, 6).map((s, i) => (
             <Reveal key={s.t} delay={i * 60}>
-              <div className="lift flex h-full gap-4 rounded-2xl border border-ink/10 bg-white p-6 sm:gap-7 sm:p-8 lg:p-12">
-                <span className="mt-1 h-8 w-1 shrink-0 rounded bg-gold" />
+              <div className="lift flex h-full items-start gap-3 rounded-xl border border-ink/10 bg-white p-4 sm:gap-5 sm:rounded-2xl sm:p-6 lg:gap-7 lg:p-12">
+                <span className="mt-1 h-6 w-1 shrink-0 rounded bg-gold sm:h-8" />
 
                 <div>
-                  <h3 className="font-display text-2xl text-ink sm:text-3xl lg:text-[2.125rem]">
+                  <h3 className="font-display text-xl leading-snug text-ink sm:text-2xl lg:text-[2.125rem]">
                     {s.t}
                   </h3>
 
-                  <p className="mt-2 text-base leading-relaxed text-black sm:mt-3 sm:text-lg lg:text-xl">
+                  <p className="mt-1.5 text-[15px] leading-relaxed text-black/80 sm:mt-2 sm:text-base lg:mt-3 lg:text-xl lg:text-black">
                     {s.d}
                   </p>
                 </div>
@@ -241,7 +241,7 @@ export default function Home() {
           ))}
         </div>
 
-        <Reveal className="mt-10 text-center">
+        <Reveal className="mt-8 text-center sm:mt-10">
           <Link
             to="/services"
             className="ul-anim font-semibold text-ink lg:text-lg"
