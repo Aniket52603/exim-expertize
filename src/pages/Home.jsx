@@ -8,7 +8,7 @@ export default function Home() {
   return (
     <>
       {/* ================= HERO SECTION ================= */}
-      <section className="relative min-h-[600px] overflow-hidden sm:min-h-[750px] lg:min-h-[875px]">
+      <section className="relative min-h-[620px] overflow-hidden sm:min-h-[750px] lg:min-h-[875px]">
 
         {/* ================= CARGO SHIP WALLPAPER ================= */}
         <div className="absolute inset-0">
@@ -17,6 +17,8 @@ export default function Home() {
             alt="Cargo ship and containers at an international port"
             className="h-full w-full object-cover object-[70%_center] opacity-96 sm:object-center"
           />
+          {/* readability overlay: mobile/tablet only */}
+          <div className="absolute inset-0 bg-gradient-to-b from-black/50 via-black/30 to-black/10 lg:hidden" />
         </div>
 
         {/* ================= HERO CONTENT ================= */}
@@ -27,9 +29,8 @@ export default function Home() {
             z-10
             mx-auto
             max-w-6xl
-            px-6
-            pt-32
-            sm:px-5
+            px-5
+            pt-28
             sm:pt-36
             lg:max-w-7xl
             lg:px-10
@@ -50,13 +51,11 @@ export default function Home() {
                   rounded-full
                   border
                   border-gold/40
-                  px-3.5
+                  px-4
                   py-1.5
-                  text-[11px]
-                  tracking-[.18em]
+                  text-xs
+                  tracking-[.2em]
                   text-gold2
-                  sm:px-4
-                  sm:text-xs
                   lg:px-5
                   lg:py-2
                   lg:text-sm
@@ -69,23 +68,21 @@ export default function Home() {
               <h1
                 className="
                   font-display
-                  text-[2rem]
-                  leading-[1.12]
-                  tracking-tight
+                  text-[2.1rem]
+                  leading-[1.15]
                   text-white
                   sm:text-5xl
-                  sm:tracking-normal
                   lg:text-6xl
                   xl:text-7xl
                 "
               >
-                <span className="lg:drop-shadow-[0_3px_10px_rgba(0,0,0,0.65)]">
+                <span className="drop-shadow-[0_3px_10px_rgba(0,0,0,0.65)]">
                   Clearing the path for{" "}
                 </span>
                 <span className="text-gold">
                   Indian exporters
                 </span>{" "}
-                <span className="lg:drop-shadow-[0_3px_10px_rgba(0,0,0,0.65)]">
+                <span className="drop-shadow-[0_3px_10px_rgba(0,0,0,0.65)]">
                   &amp; importers.
                 </span>
               </h1>
@@ -99,17 +96,16 @@ export default function Home() {
 
               <p
                 className="
-                  mt-4
+                  mt-5
                   max-w-xl
                   text-[15px]
                   leading-relaxed
                   text-white
-                  sm:mt-5
+                  drop-shadow-[0_2px_6px_rgba(0,0,0,0.8)]
                   sm:text-base
                   lg:mt-8
                   lg:max-w-2xl
                   lg:text-xl
-                  lg:drop-shadow-[0_2px_6px_rgba(0,0,0,0.8)]
                 "
               >
                 Over 40 years of hands-on expertise in Foreign Trade Policy,
@@ -125,11 +121,10 @@ export default function Home() {
             <div
               className="
                 hero-text
-                mt-7
+                mt-8
                 flex
                 flex-col
                 gap-3
-                sm:mt-9
                 sm:flex-row
                 sm:flex-wrap
                 sm:gap-4
@@ -146,17 +141,15 @@ export default function Home() {
                   rounded-full
                   bg-gold
                   px-7
-                  py-3
+                  py-3.5
                   text-center
-                  text-[15px]
+                  text-base
                   font-semibold
                   text-ink
                   transition
                   hover:bg-gold2
                   hover:shadow-[0_14px_30px_-12px_rgba(217,155,37,.9)]
                   sm:w-auto
-                  sm:py-3.5
-                  sm:text-base
                   lg:px-9
                   lg:py-4.5
                   lg:text-xl
@@ -171,12 +164,12 @@ export default function Home() {
                   w-full
                   rounded-full
                   border
-                  border-white/80
-                  bg-white/15
+                  border-white/70
+                  bg-black/20
                   px-7
-                  py-3
+                  py-3.5
                   text-center
-                  text-[15px]
+                  text-base
                   font-semibold
                   text-white
                   backdrop-blur-sm
@@ -184,8 +177,6 @@ export default function Home() {
                   hover:border-gold
                   hover:text-gold2
                   sm:w-auto
-                  sm:py-3.5
-                  sm:text-base
                   lg:px-9
                   lg:py-4.5
                   lg:text-xl
@@ -202,7 +193,7 @@ export default function Home() {
       </section>
 
       {/* ================= HIGHLIGHTS ================= */}
-      <section className="relative z-10 mx-auto -mt-10 max-w-6xl px-5 lg:-mt-16 lg:max-w-7xl lg:px-10">
+      <section className="relative z-10 mx-auto -mt-12 max-w-6xl px-5 lg:-mt-16 lg:max-w-7xl lg:px-10">
         <div className="grid grid-cols-2 gap-px overflow-hidden rounded-2xl bg-ink/10 shadow-xl lg:grid-cols-4">
           {HILITE.map(([a, b], i) => (
             <Reveal
@@ -264,18 +255,18 @@ export default function Home() {
       <section className="bg-ink2 py-14 text-cream sm:py-20 lg:py-28">
         <div className="mx-auto max-w-3xl px-5 text-center lg:max-w-4xl">
           <Reveal>
-            <h2 className="font-display text-[1.75rem] leading-snug sm:text-4xl lg:text-5xl">
+            <h2 className="font-display text-3xl sm:text-4xl lg:text-5xl">
               Facing an SVB query or a pending EODC?
             </h2>
 
-            <p className="mt-3 text-[15px] text-cream/70 sm:mt-4 sm:text-base lg:mt-5 lg:text-lg">
+            <p className="mt-4 text-cream/70 lg:mt-5 lg:text-lg">
               Send us the file. You'll get a clear, practical opinion — not a
               textbook.
             </p>
 
             <Link
               to="/contact"
-              className="mt-7 inline-block w-full rounded-full bg-gold px-8 py-3 text-center font-semibold text-ink transition hover:bg-gold2 sm:mt-8 sm:w-auto sm:py-3.5 lg:mt-9 lg:px-10 lg:py-4 lg:text-lg"
+              className="mt-8 inline-block rounded-full bg-gold px-8 py-3.5 font-semibold text-ink transition hover:bg-gold2 lg:mt-9 lg:px-10 lg:py-4 lg:text-lg"
             >
               Get in touch
             </Link>
