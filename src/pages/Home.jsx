@@ -76,13 +76,13 @@ export default function Home() {
                   xl:text-7xl
                 "
               >
-                <span className="drop-shadow-[0_3px_10px_rgba(0,0,0,0.65)]">
+                <span className="">
                   Clearing the path for{" "}
                 </span>
                 <span className="text-gold">
                   Indian exporters
                 </span>{" "}
-                <span className="drop-shadow-[0_3px_10px_rgba(0,0,0,0.65)]">
+                <span className="">
                   &amp; importers.
                 </span>
               </h1>

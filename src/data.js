@@ -19,7 +19,7 @@ export const CONTACT = {
     ["Babu Ezhumavil", "+91 98240 36636"],
     ["Ritwik Babu", "+91 76988 66339"],
   ],
-  whatsapp: "917698866339",
+  whatsapp: "919824036636",
   emails: ["eximexpertize@gmail.com", "eximexpertize1@gmail.com"]
 };
 
