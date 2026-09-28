@@ -8,15 +8,17 @@ export default function Home() {
   return (
     <>
       {/* ================= HERO SECTION ================= */}
-      <section className="relative min-h-[680px] overflow-hidden sm:min-h-[750px] lg:min-h-[875px]">
+      <section className="relative min-h-[620px] overflow-hidden sm:min-h-[750px] lg:min-h-[875px]">
 
         {/* ================= CARGO SHIP WALLPAPER ================= */}
         <div className="absolute inset-0">
           <img
             src="/image.png"
             alt="Cargo ship and containers at an international port"
-            className="h-full w-full object-cover object-center opacity-96"
+            className="h-full w-full object-cover object-[70%_center] opacity-96 sm:object-center"
           />
+          {/* readability overlay: mobile/tablet only */}
+          <div className="absolute inset-0 bg-gradient-to-b from-black/50 via-black/30 to-black/10 lg:hidden" />
         </div>
 
         {/* ================= HERO CONTENT ================= */}
@@ -28,7 +30,8 @@ export default function Home() {
             mx-auto
             max-w-6xl
             px-5
-            pt-36
+            pt-28
+            sm:pt-36
             lg:max-w-7xl
             lg:px-10
             lg:pt-56
@@ -65,8 +68,8 @@ export default function Home() {
               <h1
                 className="
                   font-display
-                  text-4xl
-                  leading-tight
+                  text-[2.1rem]
+                  leading-[1.15]
                   text-white
                   sm:text-5xl
                   lg:text-6xl
@@ -93,12 +96,13 @@ export default function Home() {
 
               <p
                 className="
-                  mt-6
+                  mt-5
                   max-w-xl
-                  text-base
+                  text-[15px]
                   leading-relaxed
                   text-white
                   drop-shadow-[0_2px_6px_rgba(0,0,0,0.8)]
+                  sm:text-base
                   lg:mt-8
                   lg:max-w-2xl
                   lg:text-xl
@@ -117,10 +121,13 @@ export default function Home() {
             <div
               className="
                 hero-text
-                mt-9
+                mt-8
                 flex
-                flex-wrap
-                gap-4
+                flex-col
+                gap-3
+                sm:flex-row
+                sm:flex-wrap
+                sm:gap-4
                 lg:mt-12
                 lg:ml-[-10px]
                 lg:gap-6
@@ -130,17 +137,19 @@ export default function Home() {
               <Link
                 to="/services"
                 className="
+                  w-full
                   rounded-full
                   bg-gold
                   px-7
                   py-3.5
+                  text-center
                   text-base
                   font-semibold
                   text-ink
                   transition
                   hover:bg-gold2
                   hover:shadow-[0_14px_30px_-12px_rgba(217,155,37,.9)]
-                  sm:text-lg
+                  sm:w-auto
                   lg:px-9
                   lg:py-4.5
                   lg:text-xl
@@ -152,12 +161,14 @@ export default function Home() {
               <Link
                 to="/contact"
                 className="
+                  w-full
                   rounded-full
                   border
                   border-white/70
                   bg-black/20
                   px-7
                   py-3.5
+                  text-center
                   text-base
                   font-semibold
                   text-white
@@ -165,7 +176,7 @@ export default function Home() {
                   transition
                   hover:border-gold
                   hover:text-gold2
-                  sm:text-lg
+                  sm:w-auto
                   lg:px-9
                   lg:py-4.5
                   lg:text-xl
@@ -183,18 +194,18 @@ export default function Home() {
 
       {/* ================= HIGHLIGHTS ================= */}
       <section className="relative z-10 mx-auto -mt-12 max-w-6xl px-5 lg:-mt-16 lg:max-w-7xl lg:px-10">
-        <div className="grid gap-px overflow-hidden rounded-2xl bg-ink/10 shadow-xl sm:grid-cols-2 lg:grid-cols-4">
+        <div className="grid grid-cols-2 gap-px overflow-hidden rounded-2xl bg-ink/10 shadow-xl lg:grid-cols-4">
           {HILITE.map(([a, b], i) => (
             <Reveal
               key={a}
               delay={i * 90}
-              className="bg-cream px-6 py-7 text-center lg:px-8 lg:py-10"
+              className="bg-cream px-3 py-5 text-center sm:px-6 sm:py-7 lg:px-8 lg:py-10"
             >
-              <p className="font-display text-2xl text-gold font-bold lg:text-3xl">
+              <p className="font-display text-lg font-bold text-gold sm:text-2xl lg:text-3xl">
                 {a}
               </p>
 
-              <p className="mt-1 text-sm font-medium text-ink/70 lg:mt-2 lg:text-base">
+              <p className="mt-1 text-xs font-medium text-ink/70 sm:text-sm lg:mt-2 lg:text-base">
                 {b}
               </p>
             </Reveal>
@@ -205,7 +216,7 @@ export default function Home() {
       <AboutUs />
 
       {/* ================= SERVICES ================= */}
-      <section className="mx-auto max-w-6xl px-5 py-24 lg:max-w-7xl lg:px-10 lg:py-32">
+      <section className="mx-auto max-w-6xl px-5 py-16 sm:py-24 lg:max-w-7xl lg:px-10 lg:py-32">
         <Title kicker="WHAT WE DO">
           Specialised EXIM advisory
         </Title>
@@ -213,15 +224,15 @@ export default function Home() {
         <div className="grid gap-6 md:grid-cols-2 lg:gap-8">
           {SERVICES.slice(0, 6).map((s, i) => (
             <Reveal key={s.t} delay={i * 60}>
-              <div className="lift flex h-full gap-7 rounded-2xl border border-ink/10 bg-white p-10 lg:p-12">
+              <div className="lift flex h-full gap-4 rounded-2xl border border-ink/10 bg-white p-6 sm:gap-7 sm:p-8 lg:p-12">
                 <span className="mt-1 h-8 w-1 shrink-0 rounded bg-gold" />
 
                 <div>
-                  <h3 className="font-display text-3xl text-ink lg:text-[2.125rem]">
+                  <h3 className="font-display text-2xl text-ink sm:text-3xl lg:text-[2.125rem]">
                     {s.t}
                   </h3>
 
-                  <p className="mt-3 text-lg leading-relaxed text-black lg:text-xl">
+                  <p className="mt-2 text-base leading-relaxed text-black sm:mt-3 sm:text-lg lg:text-xl">
                     {s.d}
                   </p>
                 </div>
@@ -241,7 +252,7 @@ export default function Home() {
       </section>
 
       {/* ================= CONTACT CTA ================= */}
-      <section className="bg-ink2 py-20 text-cream lg:py-28">
+      <section className="bg-ink2 py-14 text-cream sm:py-20 lg:py-28">
         <div className="mx-auto max-w-3xl px-5 text-center lg:max-w-4xl">
           <Reveal>
             <h2 className="font-display text-3xl sm:text-4xl lg:text-5xl">
