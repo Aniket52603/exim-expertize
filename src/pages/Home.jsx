@@ -79,9 +79,9 @@ export default function Home() {
                 <span className="">
                   Clearing the path for{" "}
                 </span>
-                <span className="text-[#D99B25] drop-shadow-none">
-                  Indian exporters
-                </span>{" "}
+                <span className="text-[#ffc93c] drop-shadow-[0_2px_8px_rgba(10,30,60,0.55)]">
+  Indian exporters
+</span>{" "}
                 <span className="">
                   &amp; importers.
                 </span>
