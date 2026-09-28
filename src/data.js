@@ -15,9 +15,12 @@ export const HILITE = [
 
 export const CONTACT = {
   office: "B-101, Fortune Business Park, Ahmedabad, Gujarat",
-  mobile: "+91 80103 93572",
-  landline: "+91 79 0000 0000",
-  emails: "info@eximexpertize.in"
+  phones: [
+    ["Babu Ezhumavil", "+91 98240 36636"],
+    ["Ritwik Babu", "+91 76988 66339"],
+  ],
+  whatsapp: "917698866339",
+  emails: ["eximexpertize@gmail.com", "eximexpertize1@gmail.com"]
 };
 
 export const SERVICES = [

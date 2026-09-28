@@ -24,7 +24,7 @@ export default function Contact() {
 
     try {
       const response = await fetch(
-        "https://formsubmit.co/ajax/chandananiket555@gmail.com",
+        `https://formsubmit.co/ajax/${CONTACT.emails[0]}`,
         {
           method: "POST",
           headers: {
@@ -77,10 +77,17 @@ export default function Contact() {
   };
 
   const rows = [
-    ["Office", CONTACT.office],
-    ["Mobile", CONTACT.mobile],
-    ["Landline", CONTACT.landline],
-    ["Email", CONTACT.emails],
+    { label: "Office", value: CONTACT.office },
+    ...CONTACT.phones.map(([label, number]) => ({
+      label,
+      value: number,
+      href: `tel:${number.replace(/\s/g, "")}`,
+    })),
+    ...CONTACT.emails.map((email, index) => ({
+      label: index === 0 ? "Email" : "Alternate email",
+      value: email,
+      href: `mailto:${email}`,
+    })),
   ];
 
   // WhatsApp message
@@ -104,7 +111,7 @@ export default function Contact() {
         <Reveal>
           <div className="space-y-9 rounded-2xl bg-ink p-11 text-cream lg:p-14">
 
-            {rows.map(([label, value]) => (
+            {rows.map(({ label, value, href }) => (
               <div
                 key={label}
                 className="border-b border-cream/15 pb-5 last:border-0"
@@ -114,7 +121,13 @@ export default function Contact() {
                 </p>
 
                 <p className="mt-1.5 text-xl leading-relaxed text-cream/85 lg:text-[1.375rem]">
-                  {value}
+                  {href ? (
+                    <a href={href} className="transition hover:text-gold">
+                      {value}
+                    </a>
+                  ) : (
+                    value
+                  )}
                 </p>
               </div>
             ))}
@@ -223,7 +236,7 @@ export default function Contact() {
 
               {/* ================= WHATSAPP BUTTON ================= */}
               <a
-                href={`https://wa.me/918010393572?text=${encodeURIComponent(
+                href={`https://wa.me/${CONTACT.whatsapp}?text=${encodeURIComponent(
                   whatsappMessage
                 )}`}
                 target="_blank"

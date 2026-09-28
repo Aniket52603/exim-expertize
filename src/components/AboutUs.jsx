@@ -1,5 +1,6 @@
 
 import { Link } from "react-router-dom";
+import Reveal from "./Reveal.jsx";
 
 const AboutUs = () => {
   return (
@@ -7,18 +8,23 @@ const AboutUs = () => {
       <div className="mx-auto max-w-7xl">
 
         {/* ABOUT HEADING */}
-        <div className="mb-10 flex items-center justify-center gap-4 sm:mb-12 sm:gap-6 lg:mb-14 lg:gap-8">
-          <span className="h-[2px] w-12 bg-ink sm:w-20 lg:w-36" />
+        <Reveal>
+          <div className="mb-10 flex items-center justify-center gap-4 sm:mb-12 sm:gap-6 lg:mb-14 lg:gap-8">
+            <span className="h-[2px] w-12 bg-ink sm:w-20 lg:w-36" />
 
-          <h2 className="whitespace-nowrap font-display text-3xl text-ink sm:text-4xl md:text-5xl lg:text-6xl">
-            About Exim Expertize
-          </h2>
+            <h2 className="whitespace-nowrap font-display text-3xl text-ink sm:text-4xl md:text-5xl lg:text-6xl">
+              About Exim Expertize
+            </h2>
 
-          <span className="h-[2px] w-12 bg-ink sm:w-20 lg:w-36" />
-        </div>
+            <span className="h-[2px] w-12 bg-ink sm:w-20 lg:w-36" />
+          </div>
+        </Reveal>
 
         {/* SHORT INTRODUCTION */}
-        <div className="mx-auto max-w-8xl rounded-3xl bg-white px-7 py-9 shadow-[0_10px_35px_rgba(0,0,0,0.08)] sm:px-10 sm:py-11 lg:px-14 lg:py-12">
+        <Reveal
+          delay={160}
+          className="mx-auto max-w-8xl rounded-3xl bg-white px-7 py-9 shadow-[0_10px_35px_rgba(0,0,0,0.08)] sm:px-10 sm:py-11 lg:px-14 lg:py-12"
+        >
 
           <div className="text-lg leading-relaxed text-black/80 lg:text-xl">
 
@@ -66,7 +72,7 @@ const AboutUs = () => {
             </Link>
           </div>
 
-        </div>
+        </Reveal>
       </div>
     </section>
   );
