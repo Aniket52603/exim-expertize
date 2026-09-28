@@ -15,7 +15,7 @@ export default function AboutPage() {
         {/* COMPANY INTRODUCTION */}
         <section className="mt-10 rounded-3xl bg-white p-7 shadow-[0_10px_35px_rgba(0,0,0,0.06)] sm:p-10 lg:p-14">
 
-          <p className="text-lg leading-8 text-black/80 lg:text-xl">
+          <p className="text-[1.1875rem] leading-8 text-black/80 lg:text-[1.3125rem]">
             Established in Ahmedabad in 1989,{" "}
             <strong className="text-ink">Exim Expertize</strong>{" "}
             provides consultancy, advice and guidance to exporters,
@@ -30,7 +30,7 @@ export default function AboutPage() {
         {/* FOUNDER */}
         <section className="mt-8 rounded-3xl bg-white p-7 shadow-[0_10px_35px_rgba(0,0,0,0.06)] sm:p-10 lg:p-14">
 
-          <p className="mb-3 text-sm font-semibold uppercase tracking-[0.2em] text-ink/60">
+          <p className="mb-3 text-sm font-semibold uppercase tracking-[0.2em] text-gold">
             The Man & Mentor
           </p>
 
@@ -38,7 +38,7 @@ export default function AboutPage() {
             Babu Ezhumavil
           </h2>
 
-          <div className="mt-6 space-y-5 text-lg leading-8 text-black/80 lg:text-xl">
+          <div className="mt-6 space-y-5 text-[1.1875rem] leading-8 text-black/80 lg:text-[1.3125rem]">
 
             <p>
               Babu Ezhumavil's experience in import-export procedures
@@ -81,7 +81,7 @@ export default function AboutPage() {
             Comprehensive EXIM Consultancy
           </h2>
 
-          <p className="mt-6 text-lg leading-8 text-cream/80 lg:text-xl">
+          <p className="mt-6 text-[1.1875rem] leading-8 text-cream/80 lg:text-[1.3125rem]">
             Our consultancy covers DGFT and ICEGATE procedures,
             Advance Authorisation, EPCG, SCOMET, Restricted Product
             Authorisations and Certificates of Origin. We also
@@ -100,7 +100,7 @@ export default function AboutPage() {
             Humility. Sincerity. Honesty.
           </h2>
 
-          <p className="mx-auto mt-4 max-w-3xl text-lg leading-8 text-black/75">
+          <p className="mx-auto mt-4 max-w-3xl text-[1.1875rem] leading-8 text-black/75">
             We believe in sharing knowledge, providing practical
             guidance and helping businesses better understand
             the procedures involved in international trade.

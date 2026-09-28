@@ -79,7 +79,7 @@ export default function Home() {
                 <span className="">
                   Clearing the path for{" "}
                 </span>
-                <span className="text-gold">
+                <span className="text-[#D99B25] drop-shadow-none">
                   Indian exporters
                 </span>{" "}
                 <span className="">
