@@ -38,7 +38,7 @@ export default function Home() {
 
           {/* ================= HEADING ================= */}
           <Reveal>
-            <div className="home-hero-title hero-text max-w-3xl lg:max-w-4xl">
+            <div className="hero-text max-w-3xl lg:max-w-4xl">
 
               <p
                 className="
@@ -73,13 +73,13 @@ export default function Home() {
                   xl:text-7xl
                 "
               >
-                <span className="">
+                <span className="drop-shadow-[0_3px_10px_rgba(0,0,0,0.65)]">
                   Clearing the path for{" "}
                 </span>
                 <span className="text-gold">
                   Indian exporters
                 </span>{" "}
-                <span className="">
+                <span className="drop-shadow-[0_3px_10px_rgba(0,0,0,0.65)]">
                   &amp; importers.
                 </span>
               </h1>
@@ -93,13 +93,12 @@ export default function Home() {
 
               <p
                 className="
-                  home-hero-copy
                   mt-6
                   max-w-xl
                   text-base
                   leading-relaxed
                   text-white
-                 
+                  drop-shadow-[0_2px_6px_rgba(0,0,0,0.8)]
                   lg:mt-8
                   lg:max-w-2xl
                   lg:text-xl
@@ -117,7 +116,6 @@ export default function Home() {
           <Reveal delay={280}>
             <div
               className="
-                home-hero-actions
                 hero-text
                 mt-9
                 flex
@@ -133,7 +131,6 @@ export default function Home() {
                 to="/services"
                 className="
                   rounded-full
-                  home-action
                   bg-gold
                   px-7
                   py-3.5
@@ -156,7 +153,6 @@ export default function Home() {
                 to="/contact"
                 className="
                   rounded-full
-                  home-action
                   border
                   border-white/70
                   bg-black/20
@@ -249,7 +245,7 @@ export default function Home() {
         <div className="mx-auto max-w-3xl px-5 text-center lg:max-w-4xl">
           <Reveal>
             <h2 className="font-display text-3xl sm:text-4xl lg:text-5xl">
-              Need assistance with an export-import matter?
+              Facing an SVB query or a pending EODC?
             </h2>
 
             <p className="mt-4 text-cream/70 lg:mt-5 lg:text-lg">
@@ -259,7 +255,7 @@ export default function Home() {
 
             <Link
               to="/contact"
-              className="home-action mt-8 inline-block rounded-full bg-gold px-8 py-3.5 font-semibold text-ink transition hover:bg-gold2 lg:mt-9 lg:px-10 lg:py-4 lg:text-lg"
+              className="mt-8 inline-block rounded-full bg-gold px-8 py-3.5 font-semibold text-ink transition hover:bg-gold2 lg:mt-9 lg:px-10 lg:py-4 lg:text-lg"
             >
               Get in touch
             </Link>

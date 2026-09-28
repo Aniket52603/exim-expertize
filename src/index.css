@@ -1,3 +1,4 @@
+
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
@@ -15,8 +16,19 @@ html {
   max-width: 100%;
   margin: 0;
   padding: 0;
+  font-size: 16px;
   scroll-behavior: smooth;
   overflow-x: hidden;
+}
+
+/* ================= DESKTOP SIZING ================= */
+
+/* Enlarge rem-based elements throughout the application on desktop */
+/* Match the look of a 67% browser zoom on desktop */
+@media (min-width: 1280px) {
+  html {
+    zoom: 0.67;
+  }
 }
 
 body {
@@ -148,14 +160,10 @@ p {
     #f7d488,
     #d99b25
   );
-
   background-size: 200% auto;
-
   -webkit-background-clip: text;
   background-clip: text;
-
   color: transparent;
-
   animation: sheen 5s linear infinite;
 }
 
@@ -169,9 +177,7 @@ p {
 
 .lift:hover {
   transform: translateY(-6px);
-
-  box-shadow:
-    0 18px 40px -18px rgba(30, 56, 50, 0.45);
+  box-shadow: 0 18px 40px -18px rgba(30, 56, 50, 0.45);
 }
 
 /* ================= UNDERLINE ANIMATION ================= */
@@ -182,17 +188,12 @@ p {
 
 .ul-anim::after {
   content: "";
-
   position: absolute;
-
   left: 0;
   bottom: -4px;
-
   height: 2px;
   width: 0;
-
   background: #d99b25;
-
   transition: width 0.3s;
 }
 
@@ -222,7 +223,7 @@ nav {
   max-width: 100%;
 }
 
-
+/* ================= REDUCED MOTION ================= */
 
 @media (prefers-reduced-motion: reduce) {
   html {
