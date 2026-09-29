@@ -192,7 +192,32 @@ export default function Home() {
 
       </section>
 
+      {/* ================= HIGHLIGHTS ================= */}
+<section className="relative z-10 mx-auto -mt-12 max-w-6xl px-4 sm:px-5 lg:-mt-16 lg:max-w-7xl lg:px-10">
+  <div className="grid grid-cols-2 overflow-hidden rounded-2xl bg-cream shadow-[0_20px_50px_-20px_rgba(10,30,60,0.45)] ring-1 ring-ink/5 lg:grid-cols-4">
+    {HILITE.map(([a, b], i) => (
+      <Reveal
+        key={a}
+        delay={i * 90}
+        className={`flex flex-col items-center justify-center border-ink/10 px-3 py-5 text-center sm:px-6 sm:py-7 lg:px-8 lg:py-10 ${
+          i % 2 === 1 ? "border-l" : ""
+        } ${i >= 2 ? "border-t lg:border-t-0" : ""} ${
+          i > 0 ? "lg:border-l" : ""
+        }`}
+      >
+        <p className="font-display text-base font-bold leading-tight text-gold [text-wrap:balance] sm:text-xl lg:text-2xl xl:text-[1.7rem]">
+          {a}
+        </p>
 
+        <span className="mx-auto mt-2 h-0.5 w-8 rounded bg-gold/40 lg:mt-3" />
+
+        <p className="mt-2 max-w-[15rem] text-xs font-medium leading-snug text-ink/70 [text-wrap:balance] sm:text-sm lg:mt-3 lg:text-base">
+          {b}
+        </p>
+      </Reveal>
+    ))}
+  </div>
+</section>
       <AboutUs />
 
       {/* ================= SERVICES ================= */}
