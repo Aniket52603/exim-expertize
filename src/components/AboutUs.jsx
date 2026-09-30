@@ -11,7 +11,7 @@ const AboutUs = () => {
           <div className="mb-7 flex items-center justify-center gap-4 sm:mb-12 sm:gap-6 lg:mb-14 lg:gap-8">
             <span className="hidden h-[2px] w-12 bg-ink sm:block sm:w-20 lg:w-36" />
 
-            <h2 className="text-center font-display text-[1.75rem] leading-tight text-ink sm:whitespace-nowrap sm:text-4xl md:text-5xl lg:text-6xl">
+            <h2 className="text-center font-display text-2xl leading-tight text-ink sm:whitespace-nowrap sm:text-4xl md:text-5xl lg:text-6xl">
               About Exim Expertize
             </h2>
 
@@ -22,10 +22,10 @@ const AboutUs = () => {
         {/* SHORT INTRODUCTION */}
         <Reveal
           delay={160}
-          className="mx-auto max-w-8xl rounded-2xl bg-white px-5 py-7 shadow-[0_10px_35px_rgba(0,0,0,0.08)] sm:rounded-3xl sm:px-10 sm:py-11 lg:px-14 lg:py-12"
+          className="mx-auto rounded-2xl bg-white px-4 py-6 shadow-[0_10px_35px_rgba(0,0,0,0.08)] sm:rounded-3xl sm:px-10 sm:py-11 lg:px-14 lg:py-12"
         >
 
-          <div className="text-[25px] leading-relaxed text-black/80 sm:text-lg lg:text-xl">
+          <div className="text-[15px] leading-relaxed text-black/80 sm:text-lg lg:text-xl">
 
             <p className="mb-4 sm:mb-5">
               <strong className="text-ink">
