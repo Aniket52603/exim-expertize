@@ -13,14 +13,24 @@ export const HILITE = [
   ["End-to-End", "Advisory support"]
 ];
 
+
 export const CONTACT = {
-  office: "B-101, Fortune Business Park, Ahmedabad, Gujarat",
+  office:
+    "E-602, Third Floor, S G Business House, Near Bridge, Gota, Ahmedabad 382470",
+
   phones: [
-    ["Babu Ezhumavil", "+91 98240 36636"],
-    ["Ritwik Babu", "+91 76988 66339"],
+     ["Office - Pujan Soni", "7940077484"],
+    ["Amit Jadhav", "9737600634"],
+    
+    ["Babu Ezhumavil / Ritwik Babu", "9824036636 / 7698866339"],
   ],
+
   whatsapp: "919824036636",
-  emails: ["eximexpertize@gmail.com", "eximexpertize1@gmail.com"]
+
+  emails: [
+    "eximexpertize1@gmail.com",
+    "eximexpertize@gmail.com"
+  ],
 };
 
 export const SERVICES = [

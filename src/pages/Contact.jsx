@@ -6,6 +6,9 @@ import { CONTACT } from "../data.js";
 const inputClass =
   "w-full rounded-lg border border-ink/15 bg-white px-4 py-3 text-base outline-none transition focus:border-gold focus:ring-2 focus:ring-gold/30 sm:py-3.5 sm:text-lg lg:px-5 lg:py-4.5 lg:text-xl";
 
+const textareaClass =
+  "w-full min-h-[180px] rounded-lg border border-ink/15 bg-white px-4 py-3 text-base outline-none transition focus:border-gold focus:ring-2 focus:ring-gold/30 sm:min-h-[200px] sm:py-3.5 sm:text-lg lg:min-h-[220px] lg:px-5 lg:py-4.5 lg:text-xl";
+
 export default function Contact() {
   const [form, setForm] = useState({
     name: "",
@@ -103,13 +106,13 @@ export default function Contact() {
       </Title>
 
       {/* ================= CONTACT GRID ================= */}
-      <div className="grid gap-6 sm:gap-10 lg:grid-cols-2 lg:gap-14">
+      <div className="grid gap-6 sm:gap-10 lg:grid-cols-2 lg:items-stretch lg:gap-14">
 
         {/* =====================================================
             LEFT SIDE - CONTACT DETAILS
         ====================================================== */}
         <Reveal>
-          <div className="space-y-5 rounded-xl bg-ink p-6 text-cream sm:space-y-7 sm:rounded-2xl sm:p-9 lg:space-y-9 lg:p-14">
+          <div className="h-full space-y-5 rounded-xl bg-ink p-6 text-cream sm:space-y-7 sm:rounded-2xl sm:p-9 lg:space-y-9 lg:p-14">
 
             {rows.map(({ label, value, href }) => (
               <div
@@ -144,7 +147,7 @@ export default function Contact() {
             RIGHT SIDE - CONTACT FORM
         ====================================================== */}
         <Reveal delay={140}>
-          <div className="rounded-xl border border-ink/10 bg-white p-6 sm:rounded-2xl sm:p-9 lg:p-14">
+          <div className="h-full rounded-xl border border-ink/10 bg-white p-6 sm:rounded-2xl sm:p-9 lg:p-14">
 
             <h3 className="font-display text-2xl sm:text-3xl lg:text-[2.125rem]">
               Send an enquiry
@@ -152,7 +155,7 @@ export default function Contact() {
 
             <form
               onSubmit={handleSend}
-              className="mt-5 space-y-4 sm:mt-7 sm:space-y-6"
+              className="mt-5 flex h-full flex-col gap-3 sm:mt-7 sm:gap-4"
             >
 
               {/* ================= NAME ================= */}
@@ -195,7 +198,7 @@ export default function Contact() {
               <textarea
                 rows="4"
                 name="message"
-                className={inputClass}
+                className={textareaClass}
                 placeholder="Briefly describe your requirement"
                 aria-label="Briefly describe your requirement"
                 required
@@ -214,6 +217,7 @@ export default function Contact() {
                 type="submit"
                 disabled={status === "sending"}
                 className="
+                  mt-4
                   w-full
                   rounded-full
                   bg-gold
@@ -224,6 +228,7 @@ export default function Contact() {
                   hover:bg-gold2
                   disabled:cursor-not-allowed
                   disabled:opacity-60
+                  lg:mt-5
                   lg:py-4
                   lg:text-lg
                 "
@@ -241,6 +246,7 @@ export default function Contact() {
                 target="_blank"
                 rel="noopener noreferrer"
                 className="
+                  mt-1
                   flex
                   w-full
                   items-center
@@ -258,6 +264,7 @@ export default function Contact() {
                   hover:shadow-lg
                   sm:gap-3
                   sm:text-base
+                  lg:mt-1
                   lg:py-4
                   lg:text-lg
                 "
