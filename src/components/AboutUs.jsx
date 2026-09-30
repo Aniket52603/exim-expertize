@@ -25,7 +25,7 @@ const AboutUs = () => {
           className="mx-auto max-w-8xl rounded-2xl bg-white px-5 py-7 shadow-[0_10px_35px_rgba(0,0,0,0.08)] sm:rounded-3xl sm:px-10 sm:py-11 lg:px-14 lg:py-12"
         >
 
-          <div className="text-[15px] leading-relaxed text-black/80 sm:text-lg lg:text-xl">
+          <div className="text-[25px] leading-relaxed text-black/80 sm:text-lg lg:text-xl">
 
             <p className="mb-4 sm:mb-5">
               <strong className="text-ink">

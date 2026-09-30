@@ -136,7 +136,7 @@ export default function Contact() {
             ))}
 
             <p className="text-[15px] text-cream/60 sm:text-lg lg:text-xl">
-              Working hours: Mon–Sat, 10:00 AM – 7:00 PM IST
+              Working hours: Mon–Fri  : 9:30 AM – 6:00 PM; Sat  : 9:30 AM – 3:00 PM IST
             </p>
 
           </div>
