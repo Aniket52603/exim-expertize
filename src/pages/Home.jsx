@@ -45,21 +45,22 @@ export default function Home() {
 
               <p
                 className="
-                  mb-4
-                  bg-white
-                  inline-block
-                  rounded-full
-                  border
-                  border-gold/40
-                  px-4
-                  py-1.5
-                  text-xs
-                  tracking-[.2em]
-                  text-gold2
-                  lg:px-5
-                  lg:py-2
-                  lg:text-sm
-                  font-bold
+                   mb-4
+  bg-white
+  inline-block
+  rounded-full
+  border
+  border-gold/40
+  px-3
+  py-1.5
+  text-[10px]
+  tracking-[.15em]
+  text-gold2
+  lg:px-5
+  lg:py-2
+  lg:text-sm
+  lg:tracking-[.2em]
+  font-bold
                 "
               >
                 AHMEDABAD · SINCE 1980s
