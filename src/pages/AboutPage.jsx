@@ -4,7 +4,7 @@ import Title from "../components/Title.jsx";
 
 export default function AboutPage() {
   return (
-    <main className="min-h-screen bg-[#f8f6f0] px-5 pb-20 pt-36 lg:px-10 lg:pb-28 lg:pt-44">
+    <main className="min-h-screen bg-[#f8f6f0] px-4 pb-12 pt-28 sm:px-5 sm:pb-20 sm:pt-36 lg:px-10 lg:pb-28 lg:pt-44">
 
       <div className="mx-auto max-w-7xl">
 
@@ -13,9 +13,9 @@ export default function AboutPage() {
         </Title>
 
         {/* COMPANY INTRODUCTION */}
-        <section className="mt-10 rounded-3xl bg-white p-7 shadow-[0_10px_35px_rgba(0,0,0,0.06)] sm:p-10 lg:p-14">
+        <section className="mt-7 rounded-2xl bg-white p-5 shadow-[0_10px_35px_rgba(0,0,0,0.06)] sm:mt-10 sm:rounded-3xl sm:p-10 lg:p-14">
 
-          <p className="text-[1.1875rem] leading-8 text-black/80 lg:text-[1.3125rem]">
+          <p className="text-base leading-7 text-black/80 lg:text-[1.3125rem] lg:leading-8">
             Established in Ahmedabad in 1989,{" "}
             <strong className="text-ink">Exim Expertize</strong>{" "}
             provides consultancy, advice and guidance to exporters,
@@ -28,17 +28,17 @@ export default function AboutPage() {
         </section>
 
         {/* FOUNDER */}
-        <section className="mt-8 rounded-3xl bg-white p-7 shadow-[0_10px_35px_rgba(0,0,0,0.06)] sm:p-10 lg:p-14">
+        <section className="mt-6 rounded-2xl bg-white p-5 shadow-[0_10px_35px_rgba(0,0,0,0.06)] sm:mt-8 sm:rounded-3xl sm:p-10 lg:p-14">
 
-          <p className="mb-3 text-sm font-semibold uppercase tracking-[0.2em] text-gold">
+          <p className="mb-3 text-xs font-semibold uppercase tracking-[0.2em] text-gold sm:text-sm">
             The Man & Mentor
           </p>
 
-          <h2 className="font-display text-3xl text-ink sm:text-4xl">
+          <h2 className="font-display text-2xl text-ink sm:text-4xl">
             Babu Ezhumavil
           </h2>
 
-          <div className="mt-6 space-y-5 text-[1.1875rem] leading-8 text-black/80 lg:text-[1.3125rem]">
+          <div className="mt-5 space-y-4 text-base leading-7 text-black/80 sm:mt-6 sm:space-y-5 lg:text-[1.3125rem] lg:leading-8">
 
             <p>
               Babu Ezhumavil's experience in import-export procedures
@@ -71,17 +71,17 @@ export default function AboutPage() {
         </section>
 
         {/* OUR EXPERTISE */}
-        <section className="mt-8 rounded-3xl bg-ink p-7 text-cream shadow-[0_10px_35px_rgba(0,0,0,0.06)] sm:p-10 lg:p-14">
+        <section className="mt-6 rounded-2xl bg-ink p-5 text-cream shadow-[0_10px_35px_rgba(0,0,0,0.06)] sm:mt-8 sm:rounded-3xl sm:p-10 lg:p-14">
 
-          <p className="mb-3 text-sm font-semibold uppercase tracking-[0.2em] text-gold">
+          <p className="mb-3 text-xs font-semibold uppercase tracking-[0.2em] text-gold sm:text-sm">
             What We Do
           </p>
 
-          <h2 className="font-display text-3xl text-cream sm:text-4xl">
+          <h2 className="font-display text-2xl text-cream sm:text-4xl">
             Comprehensive EXIM Consultancy
           </h2>
 
-          <p className="mt-6 text-[1.1875rem] leading-8 text-cream/80 lg:text-[1.3125rem]">
+          <p className="mt-5 text-base leading-7 text-cream/80 sm:mt-6 lg:text-[1.3125rem] lg:leading-8">
             Our consultancy covers DGFT and ICEGATE procedures,
             Advance Authorisation, EPCG, SCOMET, Restricted Product
             Authorisations and Certificates of Origin. We also
@@ -94,13 +94,13 @@ export default function AboutPage() {
         </section>
 
         {/* VALUES */}
-        <section className="mt-8 rounded-3xl border border-ink/10 bg-white p-8 text-center sm:p-10 lg:p-12">
+        <section className="mt-6 rounded-2xl border border-ink/10 bg-white p-5 text-center sm:mt-8 sm:rounded-3xl sm:p-10 lg:p-12">
 
-          <h2 className="font-display text-2xl text-ink sm:text-3xl">
+          <h2 className="font-display text-xl text-ink sm:text-3xl">
             Humility. Sincerity. Honesty.
           </h2>
 
-          <p className="mx-auto mt-4 max-w-3xl text-[1.1875rem] leading-8 text-black/75">
+          <p className="mx-auto mt-3 max-w-3xl text-base leading-7 text-black/75 sm:mt-4 lg:text-[1.1875rem] lg:leading-8">
             We believe in sharing knowledge, providing practical
             guidance and helping businesses better understand
             the procedures involved in international trade.
@@ -108,7 +108,7 @@ export default function AboutPage() {
 
           <Link
             to="/contact"
-            className="mt-7 inline-flex rounded-full bg-gold px-8 py-3 font-semibold text-ink transition hover:bg-gold2"
+            className="mt-6 inline-flex rounded-full bg-gold px-7 py-3 text-sm font-semibold text-ink transition hover:bg-gold2 sm:mt-7 sm:px-8 sm:text-base"
           >
             Contact Us
           </Link>
