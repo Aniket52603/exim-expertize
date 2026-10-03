@@ -1,4 +1,5 @@
-import { useState } from "react";
+import { useEffect, useState } from "react";
+import { useLocation } from "react-router-dom";
 import Reveal from "../components/Reveal.jsx";
 import Title from "../components/Title.jsx";
 import { CONTACT } from "../data.js";
@@ -18,6 +19,21 @@ export default function Contact() {
 
   const [status, setStatus] = useState("idle");
   const [error, setError] = useState("");
+
+  // Scroll to a section when the URL has a hash, e.g. /contact#enquiry
+  const { hash } = useLocation();
+
+  useEffect(() => {
+    if (!hash) return;
+
+    const timer = setTimeout(() => {
+      document
+        .querySelector(hash)
+        ?.scrollIntoView({ behavior: "smooth", block: "start" });
+    }, 150);
+
+    return () => clearTimeout(timer);
+  }, [hash]);
 
   const handleSend = async (event) => {
     event.preventDefault();
@@ -145,9 +161,14 @@ export default function Contact() {
 
         {/* =====================================================
             RIGHT SIDE - CONTACT FORM
+            id="enquiry" is the target of the "Email Us" button
+            on the Services page (/contact#enquiry)
         ====================================================== */}
         <Reveal delay={140}>
-          <div className="h-full rounded-xl border border-ink/10 bg-white p-6 sm:rounded-2xl sm:p-9 lg:p-14">
+          <div
+            id="enquiry"
+            className="h-full scroll-mt-28 rounded-xl border border-ink/10 bg-white p-6 sm:scroll-mt-32 sm:rounded-2xl sm:p-9 lg:scroll-mt-40 lg:p-14"
+          >
 
             <h3 className="font-display text-2xl sm:text-3xl lg:text-[2.125rem]">
               Send an enquiry
