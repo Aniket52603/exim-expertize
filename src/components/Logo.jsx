@@ -7,7 +7,7 @@ export default function Logo({ dark = false, className = "h-[64px]" }) {
       className="flex items-center gap-3 shrink-0 group"
     >
       <img
-        src="/logo.webp"
+        src="/logo1.webp"
         alt="Exim Expertize"
         className={
           "brand-logo " + className +
