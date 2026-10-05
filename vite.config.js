@@ -22,4 +22,5 @@ const inlineCss = () => ({
 
 export default defineConfig({
   plugins: [react(), inlineCss()],
+   build: { sourcemap: true },
 });
