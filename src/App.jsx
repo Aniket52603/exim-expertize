@@ -1,33 +1,25 @@
-import { Routes, Route, useLocation } from "react-router-dom";
-import { useEffect } from "react";
-import Nav from "./components/Nav.jsx";
-import Footer from "./components/Footer.jsx";
+import { lazy, Suspense } from "react";
+import { Routes, Route } from "react-router-dom";
+
 import Home from "./pages/Home.jsx";
-import Services from "./pages/Services.jsx";
-import Contact from "./pages/Contact.jsx";
-import useReveal from "./hooks/useReveal.js";
-import AboutPage from "./pages/AboutPage.jsx";
+
+/* Lazy-load secondary pages */
+const About = lazy(() => import("./pages/AboutPage.jsx"));
+const Services = lazy(() => import("./pages/Services.jsx"));
+const Contact = lazy(() => import("./pages/Contact.jsx"));
 
 export default function App() {
-  const location = useLocation();
-  useReveal(location.pathname);
-
-  useEffect(() => {
-    window.scrollTo({ top: 0 });
-  }, [location.pathname]);
-
   return (
-    <>
-      <Nav />
-      <main key={location.pathname}>
-        <Routes>
-          <Route path="/" element={<Home />} />
-          <Route path="/services" element={<Services />} />
-          <Route path="/contact" element={<Contact />} />
-          <Route path="/about" element={<AboutPage />} />
-        </Routes>
-      </main>
-      <Footer />
-    </>
+    <Suspense fallback={null}>
+      <Routes>
+        {/* Home stays eager for better LCP */}
+        <Route path="/" element={<Home />} />
+
+        {/* Secondary pages are lazy-loaded */}
+        <Route path="/about" element={<About />} />
+        <Route path="/services" element={<Services />} />
+        <Route path="/contact" element={<Contact />} />
+      </Routes>
+    </Suspense>
   );
 }
