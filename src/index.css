@@ -2,15 +2,24 @@
 @tailwind components;
 @tailwind utilities;
 
-/* GLOBAL */
+/* =========================================================
+   GLOBAL
+========================================================= */
+
 *,
 *::before,
 *::after {
   box-sizing: border-box;
 }
+
+/* =========================================================
+   LOCAL FONTS
+========================================================= */
+
 @font-face {
   font-family: "Inter";
-  src: url("/fonts/Inter/static/Inter_18pt-Regular.woff2") format("woff2");
+  src: url("/fonts/Inter/static/Inter_18pt-Regular.woff2")
+    format("woff2");
   font-weight: 400;
   font-style: normal;
   font-display: swap;
@@ -18,7 +27,8 @@
 
 @font-face {
   font-family: "Inter";
-  src: url("/fonts/Inter/static/Inter_18pt-Medium.woff2") format("woff2");
+  src: url("/fonts/Inter/static/Inter_18pt-Medium.woff2")
+    format("woff2");
   font-weight: 500;
   font-style: normal;
   font-display: swap;
@@ -26,7 +36,8 @@
 
 @font-face {
   font-family: "Inter";
-  src: url("/fonts/Inter/static/Inter_18pt-SemiBold.woff2") format("woff2");
+  src: url("/fonts/Inter/static/Inter_18pt-SemiBold.woff2")
+    format("woff2");
   font-weight: 600;
   font-style: normal;
   font-display: swap;
@@ -34,7 +45,8 @@
 
 @font-face {
   font-family: "Inter";
-  src: url("/fonts/Inter/static/Inter_18pt-Bold.woff2") format("woff2");
+  src: url("/fonts/Inter/static/Inter_18pt-Bold.woff2")
+    format("woff2");
   font-weight: 700;
   font-style: normal;
   font-display: swap;
@@ -57,6 +69,10 @@
   font-style: normal;
   font-display: swap;
 }
+
+/* =========================================================
+   BASE TYPOGRAPHY
+========================================================= */
 
 html,
 body {
@@ -90,12 +106,19 @@ body {
   padding: 0;
 }
 
-/* Desktop */
+/* =========================================================
+   DESKTOP
+========================================================= */
+
 @media (min-width: 1280px) {
   html {
     zoom: 0.67;
   }
 }
+
+/* =========================================================
+   MEDIA
+========================================================= */
 
 img,
 video,
@@ -116,7 +139,10 @@ p {
   overflow-wrap: break-word;
 }
 
-/* Hero reveal */
+/* =========================================================
+   HERO REVEAL
+========================================================= */
+
 @keyframes home-hero-enter {
   from {
     opacity: 0;
@@ -130,16 +156,28 @@ p {
 }
 
 .reveal.in .home-hero-title {
-  animation: home-hero-enter 700ms cubic-bezier(0.22, 1, 0.36, 1) both;
+  animation:
+    home-hero-enter
+    700ms
+    cubic-bezier(0.22, 1, 0.36, 1)
+    both;
 }
 
 .reveal.in .home-hero-copy {
-  animation: home-hero-enter 700ms cubic-bezier(0.22, 1, 0.36, 1) 120ms
+  animation:
+    home-hero-enter
+    700ms
+    cubic-bezier(0.22, 1, 0.36, 1)
+    120ms
     both;
 }
 
 .reveal.in .home-hero-actions {
-  animation: home-hero-enter 700ms cubic-bezier(0.22, 1, 0.36, 1) 220ms
+  animation:
+    home-hero-enter
+    700ms
+    cubic-bezier(0.22, 1, 0.36, 1)
+    220ms
     both;
 }
 
@@ -156,7 +194,10 @@ p {
   transform: none;
 }
 
-/* Hero button */
+/* =========================================================
+   HERO BUTTON
+========================================================= */
+
 .home-action {
   transition:
     transform 220ms cubic-bezier(0.22, 1, 0.36, 1),
@@ -175,7 +216,10 @@ p {
   transform: translateY(0);
 }
 
-/* Float */
+/* =========================================================
+   FLOAT
+========================================================= */
+
 @keyframes float {
   0%,
   100% {
@@ -191,7 +235,10 @@ p {
   animation: float 6s ease-in-out infinite;
 }
 
-/* Sheen */
+/* =========================================================
+   SHEEN
+========================================================= */
+
 @keyframes sheen {
   0% {
     background-position: -200% 0;
@@ -203,15 +250,27 @@ p {
 }
 
 .sheen {
-  background: linear-gradient(90deg, #d99b25, #f7d488, #d99b25);
+  background: linear-gradient(
+    90deg,
+    #d99b25,
+    #f7d488,
+    #d99b25
+  );
+
   background-size: 200% auto;
+
   -webkit-background-clip: text;
   background-clip: text;
+
   color: transparent;
+
   animation: sheen 5s linear infinite;
 }
 
-/* Lift */
+/* =========================================================
+   LIFT
+========================================================= */
+
 .lift {
   transition:
     transform 0.35s cubic-bezier(0.22, 1, 0.36, 1),
@@ -220,22 +279,33 @@ p {
 
 .lift:hover {
   transform: translateY(-6px);
-  box-shadow: 0 18px 40px -18px rgba(30, 56, 50, 0.45);
+
+  box-shadow:
+    0 18px 40px -18px
+    rgba(30, 56, 50, 0.45);
 }
 
-/* Underline */
+/* =========================================================
+   UNDERLINE
+========================================================= */
+
 .ul-anim {
   position: relative;
 }
 
 .ul-anim::after {
   content: "";
+
   position: absolute;
+
   left: 0;
   bottom: -4px;
+
   width: 0;
   height: 2px;
+
   background: #d99b25;
+
   transition: width 0.3s ease;
 }
 
@@ -244,7 +314,10 @@ p {
   width: 100%;
 }
 
-/* Scrollbar */
+/* =========================================================
+   SCROLLBAR
+========================================================= */
+
 ::-webkit-scrollbar {
   width: 9px;
 }
@@ -254,7 +327,10 @@ p {
   border-radius: 9px;
 }
 
-/* Reduced motion */
+/* =========================================================
+   REDUCED MOTION
+========================================================= */
+
 @media (prefers-reduced-motion: reduce) {
   html {
     scroll-behavior: auto;
