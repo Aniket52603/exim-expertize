@@ -1,11 +1,16 @@
 {
   "rewrites": [
-     {
-      "source": "/(.*)",
+    {
+      "source": "/about",
       "destination": "/"
     },
-    { "source": "/about", "destination": "/" },
-    { "source": "/services", "destination": "/" },
-    { "source": "/contact", "destination": "/" }
+    {
+      "source": "/services",
+      "destination": "/"
+    },
+    {
+      "source": "/contact",
+      "destination": "/"
+    }
   ]
 }
