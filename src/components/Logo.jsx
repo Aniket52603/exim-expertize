@@ -6,14 +6,24 @@ export default function Logo({ dark = false, className = "h-[64px]" }) {
       to="/"
       className="flex items-center gap-3 shrink-0 group"
     >
-      <img
-        src="/logo1.webp"
-        alt="Exim Expertize"
-        className={
-          "brand-logo " + className +
-          " w-auto transition-transform duration-500"
-        }
-      />
+      <picture>
+        {/* Mobile logo */}
+        <source
+          media="(max-width: 767px)"
+          srcSet="/logo2.webp"
+        />
+
+        {/* Desktop logo */}
+        <img
+          src="/logo.webp"
+          alt="Exim Expertize"
+          className={
+            "brand-logo " +
+            className +
+            " w-auto transition-transform duration-500"
+          }
+        />
+      </picture>
 
       <span
         className={
