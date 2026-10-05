@@ -15,7 +15,7 @@ export default function Home() {
         {/* ================= CARGO SHIP WALLPAPER ================= */}
         <div className="absolute inset-0">
           <img
-            src="/image1.webp"
+            src="/image.webp"
             alt="Cargo ship and containers at an international port"
             fetchPriority="high"
             className="h-full w-full object-cover object-[70%_center] opacity-96 sm:object-center"
