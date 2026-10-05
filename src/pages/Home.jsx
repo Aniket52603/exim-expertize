@@ -18,23 +18,8 @@ export default function Home() {
             ======================================================= */}
         <div className="absolute inset-0">
 
-          {/*
-            Responsive LCP image.
-
-            Mobile:
-            image-800.webp
-
-            Desktop:
-            image.webp
-
-            The same responsive sources are preloaded
-            in index.html.
-          */}
-
           <img
             src="/image.webp"
-            srcSet="/image-800.webp 800w, /image.webp 1600w"
-            sizes="100vw"
             alt="Cargo ship and containers at an international port"
             fetchPriority="high"
             decoding="async"
@@ -86,6 +71,7 @@ export default function Home() {
                 mb-4
                 inline-block
                 rounded-full
+                bg-cream/95
                 border
                 border-gold/40
                 px-3

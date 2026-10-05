@@ -42,8 +42,9 @@ This is a static site after `npm run build` (output in `dist/`). Deploy `dist/` 
 
 ## Next steps for real production use
 
-- **Contact form**: submits through FormSubmit to `chandananiket555@gmail.com` by default.
-  Set `VITE_CONTACT_FORM_ENDPOINT` in the deployment environment to use another endpoint.
+- **Contact form**: submits through FormSubmit to `eximexpertize1@gmail.com` (configured in
+  `src/data.js`). Before handoff, send and confirm a real test enquiry with the client; the
+  form's delivery depends on FormSubmit and its recipient verification.
 - **SEO**: add per-page `<title>`/meta tags (e.g. with `react-helmet-async`) since this
   is a client-side rendered SPA.
 - **Analytics**: add Google Analytics / Plausible as needed.
