@@ -26,15 +26,7 @@ export default function Services() {
               </a>{" "}
               with a brief note on your problem and any suggestion you may have.
             </p>
-            <p className="mt-2 text-sm leading-relaxed text-ink/70 sm:text-[15px]">
-              We may ask for a fee initially, and your payment will convey to
-              us that you are serious.
-            </p>
-            <p className="mt-2 text-xs leading-relaxed text-ink/60 sm:text-sm">
-              Any payment you make will attract GST @ 18% (9% CGST + 9% SGST,
-              or 18% IGST, depending on your area). Please also intimate your
-              GSTIN.
-            </p>
+            
           </div>
 
           <Link
