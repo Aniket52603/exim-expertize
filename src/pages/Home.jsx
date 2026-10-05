@@ -1,4 +1,5 @@
 import { Link } from "react-router-dom";
+
 import Reveal from "../components/Reveal.jsx";
 import Title from "../components/Title.jsx";
 import AboutUs from "../components/AboutUs.jsx";
@@ -12,19 +13,33 @@ export default function Home() {
           ========================================================= */}
       <section className="relative min-h-[620px] overflow-hidden sm:min-h-[750px] lg:min-h-[875px]">
 
-        {/* ================= CARGO SHIP WALLPAPER ================= */}
+        {/* =======================================================
+            CARGO SHIP WALLPAPER
+            ======================================================= */}
         <div className="absolute inset-0">
+
           {/*
-            LCP image. Preloaded in index.html.
-            To use a smaller mobile copy, create public/image-800.webp and add:
-              srcSet="/image-800.webp 800w, /image.webp 1600w"
-              sizes="100vw"
-            The same srcset/sizes must be used in the preload in index.html.
+            Responsive LCP image.
+
+            Mobile:
+            image-800.webp
+
+            Desktop:
+            image.webp
+
+            The same responsive sources are preloaded
+            in index.html.
           */}
+
           <img
             src="/image.webp"
+            srcSet="/image-800.webp 800w, /image.webp 1600w"
+            sizes="100vw"
             alt="Cargo ship and containers at an international port"
-            fetchpriority="high"
+            fetchPriority="high"
+            decoding="async"
+            width="1688"
+            height="932"
             className="h-full w-full object-cover object-[70%_center] sm:object-center"
           />
 
@@ -32,7 +47,10 @@ export default function Home() {
           <div className="absolute inset-0 bg-gradient-to-b from-black/50 via-black/30 to-black/10 lg:hidden" />
         </div>
 
-        {/* ================= HERO CONTENT ================= */}
+
+        {/* =======================================================
+            HERO CONTENT
+            ======================================================= */}
         <div
           className="
             hero-content
@@ -50,8 +68,17 @@ export default function Home() {
           "
         >
 
-          {/* ================= HEADING ================= */}
-          {/* No Reveal here — this is part of the LCP area */}
+          {/* =====================================================
+              HEADING
+              ===================================================== */}
+
+          {/*
+            No Reveal here.
+
+            This is important because the hero heading is
+            part of the initial LCP area.
+          */}
+
           <div className="hero-text max-w-3xl lg:max-w-4xl">
 
             <p
@@ -61,7 +88,6 @@ export default function Home() {
                 rounded-full
                 border
                 border-gold/40
-                text-cream/90
                 px-3
                 py-1.5
                 text-[10px]
@@ -76,6 +102,7 @@ export default function Home() {
             >
               AHMEDABAD · SINCE 1980s
             </p>
+
 
             <h1
               className="
@@ -103,8 +130,17 @@ export default function Home() {
 
           </div>
 
-          {/* ================= DESCRIPTION ================= */}
-          {/* No Reveal here — part of the initial viewport */}
+
+          {/* =====================================================
+              DESCRIPTION
+              ===================================================== */}
+
+          {/*
+            No Reveal here.
+
+            This remains part of the initial viewport.
+          */}
+
           <div className="hero-text">
 
             <p
@@ -128,8 +164,18 @@ export default function Home() {
 
           </div>
 
-          {/* ================= BUTTONS ================= */}
-          {/* No Reveal here — avoid delaying initial hero paint */}
+
+          {/* =====================================================
+              BUTTONS
+              ===================================================== */}
+
+          {/*
+            No Reveal here.
+
+            This prevents the initial hero content from being
+            delayed during the LCP measurement.
+          */}
+
           <div
             className="
               hero-text
@@ -146,6 +192,7 @@ export default function Home() {
             "
           >
 
+            {/* Explore Services */}
             <Link
               to="/services"
               className="
@@ -170,6 +217,8 @@ export default function Home() {
               Explore services
             </Link>
 
+
+            {/* Request Consultation */}
             <Link
               to="/contact"
               className="
@@ -206,6 +255,7 @@ export default function Home() {
       {/* =========================================================
           HIGHLIGHTS
           ========================================================= */}
+
       <section
         className="
           relative
@@ -220,6 +270,7 @@ export default function Home() {
           lg:px-10
         "
       >
+
         <div
           className="
             grid
@@ -233,6 +284,7 @@ export default function Home() {
             lg:grid-cols-4
           "
         >
+
           {HILITE.map(([a, b], i) => (
             <Reveal
               key={a}
@@ -255,6 +307,7 @@ export default function Home() {
                 ${i > 0 ? "lg:border-l" : ""}
               `}
             >
+
               <p
                 className="
                   font-display
@@ -271,7 +324,9 @@ export default function Home() {
                 {a}
               </p>
 
+
               <span className="mx-auto mt-2 h-0.5 w-8 rounded bg-gold/40 lg:mt-3" />
+
 
               <p
                 className="
@@ -289,21 +344,26 @@ export default function Home() {
               >
                 {b}
               </p>
+
             </Reveal>
           ))}
+
         </div>
+
       </section>
 
 
       {/* =========================================================
           ABOUT US
           ========================================================= */}
+
       <AboutUs />
 
 
       {/* =========================================================
           SERVICES
           ========================================================= */}
+
       <section
         className="
           mx-auto
@@ -317,13 +377,20 @@ export default function Home() {
           lg:py-32
         "
       >
+
         <Title kicker="WHAT WE DO">
           Specialised EXIM advisory
         </Title>
 
+
         <div className="grid gap-3 sm:gap-5 md:grid-cols-2 lg:gap-8">
+
           {SERVICES.slice(0, 6).map((s, i) => (
-            <Reveal key={s.t} delay={i * 60}>
+            <Reveal
+              key={s.t}
+              delay={i * 60}
+            >
+
               <div
                 className="
                   lift
@@ -343,9 +410,12 @@ export default function Home() {
                   lg:p-12
                 "
               >
+
                 <span className="mt-1 h-6 w-1 shrink-0 rounded bg-gold sm:h-8" />
 
+
                 <div>
+
                   <h3
                     className="
                       font-display
@@ -358,6 +428,7 @@ export default function Home() {
                   >
                     {s.t}
                   </h3>
+
 
                   <p
                     className="
@@ -374,37 +445,51 @@ export default function Home() {
                   >
                     {s.d}
                   </p>
+
                 </div>
+
               </div>
+
             </Reveal>
           ))}
+
         </div>
 
+
         <Reveal className="mt-8 text-center sm:mt-10">
+
           <Link
             to="/services"
             className="ul-anim font-semibold text-ink lg:text-lg"
           >
             View all services →
           </Link>
+
         </Reveal>
+
       </section>
 
 
       {/* =========================================================
           CONTACT CTA
           ========================================================= */}
+
       <section className="bg-ink2 py-14 text-cream sm:py-20 lg:py-28">
+
         <div className="mx-auto max-w-3xl px-5 text-center lg:max-w-4xl">
+
           <Reveal>
+
             <h2 className="font-display text-3xl sm:text-4xl lg:text-5xl">
               Facing an SVB query or a pending EODC?
             </h2>
+
 
             <p className="mt-4 text-cream/70 lg:mt-5 lg:text-lg">
               Send us the file. You'll get a clear, practical opinion — not a
               textbook.
             </p>
+
 
             <Link
               to="/contact"
@@ -427,8 +512,11 @@ export default function Home() {
             >
               Get in touch
             </Link>
+
           </Reveal>
+
         </div>
+
       </section>
     </>
   );

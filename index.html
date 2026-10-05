@@ -8,57 +8,30 @@
       content="width=device-width, initial-scale=1.0"
     />
 
-    <!-- ================= GOOGLE SEARCH CONSOLE ================= -->
+    <!-- GOOGLE SEARCH CONSOLE -->
     <meta
       name="google-site-verification"
       content="zVtpCVqaCopIBSaccPFa3eZ88Y76yqTsNbqwmb0Ocxo"
     />
 
-    <!-- ================= LCP HERO IMAGE (first, so it gets bandwidth priority) ================= -->
+    <!-- =========================================================
+         LCP HERO IMAGE
+         Mobile → image-800.webp
+         Desktop → image.webp
+         ========================================================= -->
     <link
       rel="preload"
       as="image"
-      type="image/webp"
       href="/image.webp"
+      imagesrcset="/image-800.webp 800w, /image.webp 1600w"
+      imagesizes="100vw"
       fetchpriority="high"
     />
 
-    <!--
-      OPTIONAL: once you have created public/image-800.webp (an 800px-wide copy),
-      replace the preload above with this one, and add the SAME srcSet/sizes
-      to the <img> in Home.jsx. They must match, or the image downloads twice.
-
-      <link
-        rel="preload"
-        as="image"
-        type="image/webp"
-        href="/image.webp"
-        imagesrcset="/image-800.webp 800w, /image.webp 1600w"
-        imagesizes="100vw"
-        fetchpriority="high"
-      />
-    -->
-
-    <!-- ================= FONT PRELOAD (above-the-fold only) ================= -->
-    <!-- crossorigin is required for font preloads, even for same-origin files -->
-    <link
-      rel="preload"
-      as="font"
-      type="font/woff2"
-      href="/fonts/Inter-Variable-latin.woff2"
-      crossorigin
-    />
-
-    <link
-      rel="preload"
-      as="font"
-      type="font/woff2"
-      href="/fonts/Playfair_Display/static/PlayfairDisplay-SemiBold.woff2"
-      crossorigin
-    />
-
-    <!-- ================= PRIMARY SEO ================= -->
-    <title>Exim Expertize | Foreign Trade & Customs Consultants</title>
+    <!-- PRIMARY SEO -->
+    <title>
+      Exim Expertize | Foreign Trade & Customs Consultants
+    </title>
 
     <meta
       name="description"
@@ -70,28 +43,33 @@
       content="Exim Expertize, EXIM consultancy, export import consultant, foreign trade consultant, customs consultant, DGFT consultant, ICEGATE consultant, EPCG, EOU, SEZ, AEO, duty drawback"
     />
 
-    <meta name="robots" content="index, follow" />
+    <meta
+      name="robots"
+      content="index, follow"
+    />
 
-    <!-- ================= CANONICAL ================= -->
+    <!-- CANONICAL -->
     <link
       rel="canonical"
       href="https://www.eximexpertize.com/"
     />
 
-    <!-- ================= FAVICON ================= -->
+    <!-- FAVICON -->
     <link
       rel="icon"
       href="/logo.webp"
       type="image/webp"
     />
 
-    <!-- ================= THEME ================= -->
+    <!-- THEME -->
     <meta
       name="theme-color"
       content="#1e3832"
     />
 
-    <!-- ================= OPEN GRAPH ================= -->
+    <!-- =========================================================
+         OPEN GRAPH
+         ========================================================= -->
     <meta
       property="og:type"
       content="website"
@@ -122,7 +100,9 @@
       content="Exim Expertize"
     />
 
-    <!-- ================= TWITTER / X ================= -->
+    <!-- =========================================================
+         TWITTER / X
+         ========================================================= -->
     <meta
       name="twitter:card"
       content="summary_large_image"
@@ -143,7 +123,9 @@
       content="https://www.eximexpertize.com/logo.webp"
     />
 
-    <!-- ================= ORGANIZATION STRUCTURED DATA ================= -->
+    <!-- =========================================================
+         ORGANIZATION STRUCTURED DATA
+         ========================================================= -->
     <script type="application/ld+json">
       {
         "@context": "https://schema.org",
