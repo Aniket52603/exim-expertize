@@ -7,7 +7,9 @@ import { SERVICES, HILITE } from "../data.js";
 export default function Home() {
   return (
     <>
-      {/* ================= HERO SECTION ================= */}
+      {/* =========================================================
+          HERO SECTION
+          ========================================================= */}
       <section className="relative min-h-[620px] overflow-hidden sm:min-h-[750px] lg:min-h-[875px]">
 
         {/* ================= CARGO SHIP WALLPAPER ================= */}
@@ -15,10 +17,7 @@ export default function Home() {
           <img
             src="/image.webp"
             alt="Cargo ship and containers at an international port"
-            fetchPriority="high"
-            decoding="async"
-            width="1688"
-            height="932"
+            fetchpriority="high"
             className="h-full w-full object-cover object-[70%_center] opacity-96 sm:object-center"
           />
 
@@ -94,6 +93,7 @@ export default function Home() {
                 &amp; importers.
               </span>
             </h1>
+
           </div>
 
           {/* ================= DESCRIPTION ================= */}
@@ -118,6 +118,7 @@ export default function Home() {
               Customs, SVB, GST and FEMA — turning complex regulation into
               practical, audit-ready compliance.
             </p>
+
           </div>
 
           {/* ================= BUTTONS ================= */}
@@ -137,6 +138,7 @@ export default function Home() {
               lg:gap-6
             "
           >
+
             <Link
               to="/services"
               className="
@@ -187,12 +189,16 @@ export default function Home() {
             >
               Request a consultation
             </Link>
+
           </div>
 
         </div>
       </section>
 
-      {/* ================= HIGHLIGHTS ================= */}
+
+      {/* =========================================================
+          HIGHLIGHTS
+          ========================================================= */}
       <section
         className="
           relative
@@ -281,10 +287,16 @@ export default function Home() {
         </div>
       </section>
 
-      {/* ================= ABOUT US ================= */}
+
+      {/* =========================================================
+          ABOUT US
+          ========================================================= */}
       <AboutUs />
 
-      {/* ================= SERVICES ================= */}
+
+      {/* =========================================================
+          SERVICES
+          ========================================================= */}
       <section
         className="
           mx-auto
@@ -371,7 +383,10 @@ export default function Home() {
         </Reveal>
       </section>
 
-      {/* ================= CONTACT CTA ================= */}
+
+      {/* =========================================================
+          CONTACT CTA
+          ========================================================= */}
       <section className="bg-ink2 py-14 text-cream sm:py-20 lg:py-28">
         <div className="mx-auto max-w-3xl px-5 text-center lg:max-w-4xl">
           <Reveal>

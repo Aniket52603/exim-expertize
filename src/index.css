@@ -6,38 +6,11 @@
    LOCAL FONTS
 ========================================================= */
 
+/* Inter: one variable file instead of 4 static files */
 @font-face {
   font-family: "Inter";
-  src: url("/fonts/Inter/static/Inter_18pt-Regular.woff2")
-    format("woff2");
-  font-weight: 400;
-  font-style: normal;
-  font-display: swap;
-}
-
-@font-face {
-  font-family: "Inter";
-  src: url("/fonts/Inter/static/Inter_18pt-Medium.woff2")
-    format("woff2");
-  font-weight: 500;
-  font-style: normal;
-  font-display: swap;
-}
-
-@font-face {
-  font-family: "Inter";
-  src: url("/fonts/Inter/static/Inter_18pt-SemiBold.woff2")
-    format("woff2");
-  font-weight: 600;
-  font-style: normal;
-  font-display: swap;
-}
-
-@font-face {
-  font-family: "Inter";
-  src: url("/fonts/Inter/static/Inter_18pt-Bold.woff2")
-    format("woff2");
-  font-weight: 700;
+  src: url("/fonts/Inter-Variable-latin.woff2") format("woff2");
+  font-weight: 400 700;
   font-style: normal;
   font-display: swap;
 }
@@ -60,6 +33,25 @@
   font-display: swap;
 }
 
+/* Metric-matched fallbacks (reduce layout shift) */
+@font-face {
+  font-family: "Inter Fallback";
+  src: local("Arial");
+  size-adjust: 107.4%;
+  ascent-override: 90.2%;
+  descent-override: 22.48%;
+  line-gap-override: 0%;
+}
+
+@font-face {
+  font-family: "Playfair Fallback";
+  src: local("Georgia");
+  size-adjust: 96%;
+  ascent-override: 110%;
+  descent-override: 25%;
+  line-gap-override: 0%;
+}
+
 /* =========================================================
    GLOBAL
 ========================================================= */
@@ -72,7 +64,7 @@
 
 html,
 body {
-  font-family: "Inter", sans-serif;
+  font-family: "Inter", "Inter Fallback", Arial, sans-serif;
 }
 
 html {
@@ -236,12 +228,7 @@ p {
 }
 
 .sheen {
-  background: linear-gradient(
-    90deg,
-    #d99b25,
-    #f7d488,
-    #d99b25
-  );
+  background: linear-gradient(90deg, #d99b25, #f7d488, #d99b25);
   background-size: 200% auto;
   -webkit-background-clip: text;
   background-clip: text;

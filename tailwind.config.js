@@ -12,8 +12,19 @@ export default {
         cream: "#FAF7F1",
       },
       fontFamily: {
-        display: ['"Playfair Display"', "Georgia", "serif"],
-        sans: ["Inter", "system-ui", "sans-serif"],
+        display: [
+          '"Playfair Display"',
+          '"Playfair Fallback"',
+          "Georgia",
+          "serif",
+        ],
+        sans: [
+          '"Inter"',
+          '"Inter Fallback"',
+          "Arial",
+          "system-ui",
+          "sans-serif",
+        ],
       },
     },
   },
