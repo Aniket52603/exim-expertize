@@ -1,32 +1,28 @@
-import { Routes, Route, useLocation } from "react-router-dom";
-import { useEffect } from "react";
+import { lazy, Suspense } from "react";
+import { Routes, Route } from "react-router-dom";
+
 import Nav from "./components/Nav.jsx";
 import Footer from "./components/Footer.jsx";
-import Home from "./pages/Home.jsx";
-import Services from "./pages/Services.jsx";
-import Contact from "./pages/Contact.jsx";
-import useReveal from "./hooks/useReveal.js";
-import AboutPage from "./pages/AboutPage.jsx";
+import Home from "./pages/Home.jsx"; // stays eager (LCP page)
+
+// everything else loads on demand
+const Services = lazy(() => import("./pages/Services.jsx"));
+const Contact = lazy(() => import("./pages/Contact.jsx"));
+const About = lazy(() => import("./pages/About.jsx"));
+// ...repeat for your other pages
 
 export default function App() {
-  const location = useLocation();
-  useReveal(location.pathname);
-
-  useEffect(() => {
-    window.scrollTo({ top: 0 });
-  }, [location.pathname]);
-
   return (
     <>
       <Nav />
-      <main key={location.pathname}>
+      <Suspense fallback={<div className="min-h-screen" />}>
         <Routes>
           <Route path="/" element={<Home />} />
           <Route path="/services" element={<Services />} />
           <Route path="/contact" element={<Contact />} />
-          <Route path="/about" element={<AboutPage />} />
+          <Route path="/about" element={<About />} />
         </Routes>
-      </main>
+      </Suspense>
       <Footer />
     </>
   );
