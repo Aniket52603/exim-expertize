@@ -1,4 +1,3 @@
-
 import { useEffect, useState } from "react";
 import { Link, NavLink } from "react-router-dom";
 import Logo from "./Logo.jsx";
@@ -6,24 +5,55 @@ import { NAV } from "../data.js";
 
 export default function Nav() {
   const [scrolled, setScrolled] = useState(false);
+  const [hidden, setHidden] = useState(false);
   const [menuOpen, setMenuOpen] = useState(false);
 
   useEffect(() => {
-    const onScroll = () => {
-      setScrolled(window.scrollY > 20);
+    let lastY = window.scrollY;
+    let ticking = false;
+
+    const update = () => {
+      const y = window.scrollY;
+
+      setScrolled(y > 20);
+
+      // ignore tiny movements
+      if (Math.abs(y - lastY) > 8) {
+        // hide when scrolling down (past 80px), show when scrolling up
+        setHidden(y > lastY && y > 80);
+        lastY = y;
+      }
+
+      // always show at the very top
+      if (y < 20) setHidden(false);
+
+      ticking = false;
     };
 
-    window.addEventListener("scroll", onScroll);
+    const onScroll = () => {
+      if (!ticking) {
+        window.requestAnimationFrame(update);
+        ticking = true;
+      }
+    };
+
+    window.addEventListener("scroll", onScroll, { passive: true });
 
     return () => {
       window.removeEventListener("scroll", onScroll);
     };
   }, []);
 
+  // close the mobile menu when the navbar hides
+  useEffect(() => {
+    if (hidden) setMenuOpen(false);
+  }, [hidden]);
+
   return (
     <header
       className={
         "fixed inset-x-0 top-0 z-50 bg-white transition-all duration-500 " +
+        (hidden && !menuOpen ? "-translate-y-full " : "translate-y-0 ") +
         (scrolled
           ? "shadow-[0_1px_24px_-8px_rgba(30,56,50,.4)] py-2"
           : "py-3")

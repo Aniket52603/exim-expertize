@@ -1,78 +1,27 @@
 import { Link } from "react-router-dom";
-import { useEffect, useState } from "react";
-
 import Reveal from "../components/Reveal.jsx";
 import Title from "../components/Title.jsx";
 import AboutUs from "../components/AboutUs.jsx";
 import { SERVICES, HILITE } from "../data.js";
 
 export default function Home() {
-  const [scrollY, setScrollY] = useState(0);
-
-  useEffect(() => {
-    const handleScroll = () => {
-      setScrollY(window.scrollY);
-    };
-
-    window.addEventListener("scroll", handleScroll, { passive: true });
-
-    return () => {
-      window.removeEventListener("scroll", handleScroll);
-    };
-  }, []);
-
-  // Move hero content upward while scrolling
-  // 0.45 = movement speed
-  // 400 = maximum movement
-  const heroOffset = Math.min(scrollY * 0.45, 400);
-
   return (
     <>
-      {/* ========================================================= */}
-      {/* HERO SECTION */}
-      {/* ========================================================= */}
-
+      {/* ================= HERO SECTION ================= */}
       <section className="relative min-h-[620px] overflow-hidden sm:min-h-[750px] lg:min-h-[875px]">
 
-        {/* ===================================================== */}
-        {/* CARGO SHIP BACKGROUND */}
-        {/* ===================================================== */}
-
+        {/* ================= CARGO SHIP WALLPAPER ================= */}
         <div className="absolute inset-0">
-
           <img
             src="/image.webp"
             alt="Cargo ship and containers at an international port"
-            className="
-              h-full
-              w-full
-              object-cover
-              object-[70%_center]
-              opacity-96
-              sm:object-center
-            "
+            className="h-full w-full object-cover object-[70%_center] opacity-96 sm:object-center"
           />
-
-          {/* Mobile / tablet readability overlay */}
-          <div
-            className="
-              absolute
-              inset-0
-              bg-gradient-to-b
-              from-black/50
-              via-black/30
-              to-black/10
-              lg:hidden
-            "
-          />
-
+          {/* readability overlay: mobile/tablet only */}
+          <div className="absolute inset-0 bg-gradient-to-b from-black/50 via-black/30 to-black/10 lg:hidden" />
         </div>
 
-
-        {/* ===================================================== */}
-        {/* HERO CONTENT */}
-        {/* ===================================================== */}
-
+        {/* ================= HERO CONTENT ================= */}
         <div
           className="
             hero-content
@@ -87,48 +36,35 @@ export default function Home() {
             lg:px-10
             lg:pt-56
             lg:-translate-x-20
-            will-change-transform
           "
-          style={{
-            transform: `translateY(-${heroOffset}px)`,
-          }}
         >
 
-          {/* ================================================= */}
-          {/* HEADING */}
-          {/* ================================================= */}
-
+          {/* ================= HEADING ================= */}
           <Reveal>
-
             <div className="hero-text max-w-3xl lg:max-w-4xl">
-
-              {/* Location / experience badge */}
 
               <p
                 className="
-                  mb-4
-                  inline-block
-                  rounded-full
-                  border
-                  border-gold/40
-                  bg-white
-                  px-3
-                  py-1.5
-                  text-[10px]
-                  font-bold
-                  tracking-[.15em]
-                  text-gold2
-                  lg:px-5
-                  lg:py-2
-                  lg:text-sm
-                  lg:tracking-[.2em]
+                   mb-4
+  bg-white
+  inline-block
+  rounded-full
+  border
+  border-gold/40
+  px-3
+  py-1.5
+  text-[10px]
+  tracking-[.15em]
+  text-gold2
+  lg:px-5
+  lg:py-2
+  lg:text-sm
+  lg:tracking-[.2em]
+  font-bold
                 "
               >
                 AHMEDABAD · SINCE 1980s
               </p>
-
-
-              {/* Main heading */}
 
               <h1
                 className="
@@ -141,37 +77,22 @@ export default function Home() {
                   xl:text-7xl
                 "
               >
-
-                <span>
+                <span className="">
                   Clearing the path for{" "}
                 </span>
-
-                <span
-                  className="
-                    text-[#ffc93c]
-                    drop-shadow-[0_2px_8px_rgba(10,30,60,0.55)]
-                  "
-                >
-                  Indian exporters
-                </span>{" "}
-
-                <span>
+                <span className="text-[#ffc93c] drop-shadow-[0_2px_8px_rgba(10,30,60,0.55)]">
+  Indian exporters
+</span>{" "}
+                <span className="">
                   &amp; importers.
                 </span>
-
               </h1>
 
             </div>
-
           </Reveal>
 
-
-          {/* ================================================= */}
-          {/* DESCRIPTION */}
-          {/* ================================================= */}
-
+          {/* ================= DESCRIPTION ================= */}
           <Reveal delay={150}>
-
             <div className="hero-text">
 
               <p
@@ -194,16 +115,10 @@ export default function Home() {
               </p>
 
             </div>
-
           </Reveal>
 
-
-          {/* ================================================= */}
-          {/* BUTTONS */}
-          {/* ================================================= */}
-
+          {/* ================= BUTTONS ================= */}
           <Reveal delay={280}>
-
             <div
               className="
                 hero-text
@@ -219,8 +134,6 @@ export default function Home() {
                 lg:gap-6
               "
             >
-
-              {/* Explore services */}
 
               <Link
                 to="/services"
@@ -245,9 +158,6 @@ export default function Home() {
               >
                 Explore services
               </Link>
-
-
-              {/* Consultation */}
 
               <Link
                 to="/contact"
@@ -277,355 +187,98 @@ export default function Home() {
               </Link>
 
             </div>
-
           </Reveal>
 
         </div>
 
       </section>
 
-
-      {/* ========================================================= */}
-      {/* HIGHLIGHTS */}
-      {/* ========================================================= */}
-
-      <section
-        className="
-          relative
-          z-10
-          mx-auto
-          -mt-12
-          max-w-6xl
-          px-4
-          sm:px-5
-          lg:-mt-16
-          lg:max-w-7xl
-          lg:px-10
-        "
+      {/* ================= HIGHLIGHTS ================= */}
+<section className="relative z-10 mx-auto -mt-12 max-w-6xl px-4 sm:px-5 lg:-mt-16 lg:max-w-7xl lg:px-10">
+  <div className="grid grid-cols-2 overflow-hidden rounded-2xl bg-cream shadow-[0_20px_50px_-20px_rgba(10,30,60,0.45)] ring-1 ring-ink/5 lg:grid-cols-4">
+    {HILITE.map(([a, b], i) => (
+      <Reveal
+        key={a}
+        delay={i * 90}
+        className={`flex flex-col items-center justify-center border-ink/10 px-3 py-5 text-center sm:px-6 sm:py-7 lg:px-8 lg:py-10 ${
+          i % 2 === 1 ? "border-l" : ""
+        } ${i >= 2 ? "border-t lg:border-t-0" : ""} ${
+          i > 0 ? "lg:border-l" : ""
+        }`}
       >
+        <p className="font-display text-base font-bold leading-tight text-gold [text-wrap:balance] sm:text-xl lg:text-2xl xl:text-[1.7rem]">
+          {a}
+        </p>
 
-        <div
-          className="
-            grid
-            grid-cols-2
-            overflow-hidden
-            rounded-2xl
-            bg-cream
-            shadow-[0_20px_50px_-20px_rgba(10,30,60,0.45)]
-            ring-1
-            ring-ink/5
-            lg:grid-cols-4
-          "
-        >
+        <span className="mx-auto mt-2 h-0.5 w-8 rounded bg-gold/40 lg:mt-3" />
 
-          {HILITE.map(([a, b], i) => (
-
-            <Reveal
-              key={a}
-              delay={i * 90}
-              className={`
-                flex
-                flex-col
-                items-center
-                justify-center
-                border-ink/10
-                px-3
-                py-5
-                text-center
-                sm:px-6
-                sm:py-7
-                lg:px-8
-                lg:py-10
-
-                ${i % 2 === 1 ? "border-l" : ""}
-
-                ${i >= 2 ? "border-t lg:border-t-0" : ""}
-
-                ${i > 0 ? "lg:border-l" : ""}
-              `}
-            >
-
-              <p
-                className="
-                  font-display
-                  text-base
-                  font-bold
-                  leading-tight
-                  text-gold
-                  [text-wrap:balance]
-                  sm:text-xl
-                  lg:text-2xl
-                  xl:text-[1.7rem]
-                "
-              >
-                {a}
-              </p>
-
-
-              <span
-                className="
-                  mx-auto
-                  mt-2
-                  h-0.5
-                  w-8
-                  rounded
-                  bg-gold/40
-                  lg:mt-3
-                "
-              />
-
-
-              <p
-                className="
-                  mt-2
-                  max-w-[15rem]
-                  text-xs
-                  font-medium
-                  leading-snug
-                  text-ink/70
-                  [text-wrap:balance]
-                  sm:text-sm
-                  lg:mt-3
-                  lg:text-base
-                "
-              >
-                {b}
-              </p>
-
-            </Reveal>
-
-          ))}
-
-        </div>
-
-      </section>
-
-
-      {/* ========================================================= */}
-      {/* ABOUT US */}
-      {/* ========================================================= */}
-
+        <p className="mt-2 max-w-[15rem] text-xs font-medium leading-snug text-ink/70 [text-wrap:balance] sm:text-sm lg:mt-3 lg:text-base">
+          {b}
+        </p>
+      </Reveal>
+    ))}
+  </div>
+</section>
       <AboutUs />
 
-
-      {/* ========================================================= */}
-      {/* SERVICES */}
-      {/* ========================================================= */}
-
-      <section
-        className="
-          mx-auto
-          max-w-6xl
-          px-4
-          py-12
-          sm:px-5
-          sm:py-20
-          lg:max-w-7xl
-          lg:px-10
-          lg:py-32
-        "
-      >
-
+      {/* ================= SERVICES ================= */}
+      <section className="mx-auto max-w-6xl px-4 py-12 sm:px-5 sm:py-20 lg:max-w-7xl lg:px-10 lg:py-32">
         <Title kicker="WHAT WE DO">
           Specialised EXIM advisory
         </Title>
 
-
-        <div
-          className="
-            grid
-            gap-3
-            sm:gap-5
-            md:grid-cols-2
-            lg:gap-8
-          "
-        >
-
+        <div className="grid gap-3 sm:gap-5 md:grid-cols-2 lg:gap-8">
           {SERVICES.slice(0, 6).map((s, i) => (
-
-            <Reveal
-              key={s.t}
-              delay={i * 60}
-            >
-
-              <div
-                className="
-                  lift
-                  flex
-                  h-full
-                  items-start
-                  gap-3
-                  rounded-xl
-                  border
-                  border-ink/10
-                  bg-white
-                  p-4
-                  sm:gap-5
-                  sm:rounded-2xl
-                  sm:p-6
-                  lg:gap-7
-                  lg:p-12
-                "
-              >
-
-                {/* Gold vertical line */}
-
-                <span
-                  className="
-                    mt-1
-                    h-6
-                    w-1
-                    shrink-0
-                    rounded
-                    bg-gold
-                    sm:h-8
-                  "
-                />
-
+            <Reveal key={s.t} delay={i * 60}>
+              <div className="lift flex h-full items-start gap-3 rounded-xl border border-ink/10 bg-white p-4 sm:gap-5 sm:rounded-2xl sm:p-6 lg:gap-7 lg:p-12">
+                <span className="mt-1 h-6 w-1 shrink-0 rounded bg-gold sm:h-8" />
 
                 <div>
-
-                  <h3
-                    className="
-                      font-display
-                      text-xl
-                      leading-snug
-                      text-ink
-                      sm:text-2xl
-                      lg:text-[2.125rem]
-                    "
-                  >
+                  <h3 className="font-display text-xl leading-snug text-ink sm:text-2xl lg:text-[2.125rem]">
                     {s.t}
                   </h3>
 
-
-                  <p
-                    className="
-                      mt-1.5
-                      text-[15px]
-                      leading-relaxed
-                      text-black/80
-                      sm:mt-2
-                      sm:text-base
-                      lg:mt-3
-                      lg:text-xl
-                      lg:text-black
-                    "
-                  >
+                  <p className="mt-1.5 text-[15px] leading-relaxed text-black/80 sm:mt-2 sm:text-base lg:mt-3 lg:text-xl lg:text-black">
                     {s.d}
                   </p>
-
                 </div>
-
               </div>
-
             </Reveal>
-
           ))}
-
         </div>
 
-
-        {/* View all services */}
-
         <Reveal className="mt-8 text-center sm:mt-10">
-
           <Link
             to="/services"
-            className="
-              ul-anim
-              font-semibold
-              text-ink
-              lg:text-lg
-            "
+            className="ul-anim font-semibold text-ink lg:text-lg"
           >
             View all services →
           </Link>
-
         </Reveal>
-
       </section>
 
-
-      {/* ========================================================= */}
-      {/* CONTACT CTA */}
-      {/* ========================================================= */}
-
-      <section
-        className="
-          bg-ink2
-          py-14
-          text-cream
-          sm:py-20
-          lg:py-28
-        "
-      >
-
-        <div
-          className="
-            mx-auto
-            max-w-3xl
-            px-5
-            text-center
-            lg:max-w-4xl
-          "
-        >
-
+      {/* ================= CONTACT CTA ================= */}
+      <section className="bg-ink2 py-14 text-cream sm:py-20 lg:py-28">
+        <div className="mx-auto max-w-3xl px-5 text-center lg:max-w-4xl">
           <Reveal>
-
-            <h2
-              className="
-                font-display
-                text-3xl
-                sm:text-4xl
-                lg:text-5xl
-              "
-            >
+            <h2 className="font-display text-3xl sm:text-4xl lg:text-5xl">
               Facing an SVB query or a pending EODC?
             </h2>
 
-
-            <p
-              className="
-                mt-4
-                text-cream/70
-                lg:mt-5
-                lg:text-lg
-              "
-            >
+            <p className="mt-4 text-cream/70 lg:mt-5 lg:text-lg">
               Send us the file. You'll get a clear, practical opinion — not a
               textbook.
             </p>
 
-
             <Link
               to="/contact"
-              className="
-                mt-8
-                inline-block
-                rounded-full
-                bg-gold
-                px-8
-                py-3.5
-                font-semibold
-                text-ink
-                transition
-                hover:bg-gold2
-                lg:mt-9
-                lg:px-10
-                lg:py-4
-                lg:text-lg
-              "
+              className="mt-8 inline-block rounded-full bg-gold px-8 py-3.5 font-semibold text-ink transition hover:bg-gold2 lg:mt-9 lg:px-10 lg:py-4 lg:text-lg"
             >
               Get in touch
             </Link>
-
           </Reveal>
-
         </div>
-
       </section>
-
     </>
   );
 }
