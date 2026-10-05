@@ -17,7 +17,7 @@ export default function Home() {
           <img
             src="/image.webp"
             alt="Cargo ship and containers at an international port"
-            fetchPriority="high"
+            fetchpriority="high"
             className="h-full w-full object-cover object-[70%_center] opacity-96 sm:object-center"
           />
 

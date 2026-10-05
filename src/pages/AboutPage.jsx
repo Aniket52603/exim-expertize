@@ -4,7 +4,7 @@ import Title from "../components/Title.jsx";
 
 export default function AboutPage() {
   return (
-    <main className="min-h-screen bg-[#f8f6f0] px-4 pb-12 pt-28 sm:px-5 sm:pb-20 sm:pt-36 lg:px-10 lg:pb-28 lg:pt-44">
+    <section className="min-h-screen bg-[#f8f6f0] px-4 pb-12 pt-28 sm:px-5 sm:pb-20 sm:pt-36 lg:px-10 lg:pb-28 lg:pt-44">
 
       <div className="mx-auto max-w-7xl">
 
@@ -116,6 +116,6 @@ export default function AboutPage() {
         </section>
 
       </div>
-    </main>
+    </section>
   );
 }
