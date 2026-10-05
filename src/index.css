@@ -3,13 +3,76 @@
 @tailwind utilities;
 
 /* =========================================================
+   LOCAL FONTS
+========================================================= */
+
+@font-face {
+  font-family: "Inter";
+  src: url("/fonts/Inter/static/Inter_18pt-Regular.woff2")
+    format("woff2");
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Inter";
+  src: url("/fonts/Inter/static/Inter_18pt-Medium.woff2")
+    format("woff2");
+  font-weight: 500;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Inter";
+  src: url("/fonts/Inter/static/Inter_18pt-SemiBold.woff2")
+    format("woff2");
+  font-weight: 600;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Inter";
+  src: url("/fonts/Inter/static/Inter_18pt-Bold.woff2")
+    format("woff2");
+  font-weight: 700;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Playfair Display";
+  src: url("/fonts/Playfair_Display/static/PlayfairDisplay-SemiBold.woff2")
+    format("woff2");
+  font-weight: 600;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Playfair Display";
+  src: url("/fonts/Playfair_Display/static/PlayfairDisplay-Bold.woff2")
+    format("woff2");
+  font-weight: 700;
+  font-style: normal;
+  font-display: swap;
+}
+
+/* =========================================================
    GLOBAL
-   ========================================================= */
+========================================================= */
 
 *,
 *::before,
 *::after {
   box-sizing: border-box;
+}
+
+html,
+body {
+  font-family: "Inter", sans-serif;
 }
 
 html {
@@ -41,12 +104,8 @@ body {
 
 /* =========================================================
    DESKTOP SIZING
-   ========================================================= */
+========================================================= */
 
-/*
-  Keeps your current desktop visual scale.
-  Do not change this if you want the current design size.
-*/
 @media (min-width: 1280px) {
   html {
     zoom: 0.67;
@@ -55,7 +114,7 @@ body {
 
 /* =========================================================
    MEDIA
-   ========================================================= */
+========================================================= */
 
 img,
 video,
@@ -67,7 +126,7 @@ canvas {
 
 /* =========================================================
    TEXT SAFETY
-   ========================================================= */
+========================================================= */
 
 h1,
 h2,
@@ -82,7 +141,7 @@ p {
 
 /* =========================================================
    HERO REVEAL
-   ========================================================= */
+========================================================= */
 
 @keyframes home-hero-enter {
   from {
@@ -123,7 +182,7 @@ p {
 
 /* =========================================================
    HERO BUTTON
-   ========================================================= */
+========================================================= */
 
 .home-action {
   transition:
@@ -144,8 +203,8 @@ p {
 }
 
 /* =========================================================
-   FLOAT ANIMATION
-   ========================================================= */
+   FLOAT
+========================================================= */
 
 @keyframes float {
   0%,
@@ -163,8 +222,8 @@ p {
 }
 
 /* =========================================================
-   GOLD TEXT SHEEN
-   ========================================================= */
+   SHEEN
+========================================================= */
 
 @keyframes sheen {
   0% {
@@ -192,7 +251,7 @@ p {
 
 /* =========================================================
    CARD HOVER
-   ========================================================= */
+========================================================= */
 
 .lift {
   transition:
@@ -206,8 +265,8 @@ p {
 }
 
 /* =========================================================
-   UNDERLINE ANIMATION
-   ========================================================= */
+   UNDERLINE
+========================================================= */
 
 .ul-anim {
   position: relative;
@@ -231,7 +290,7 @@ p {
 
 /* =========================================================
    SCROLLBAR
-   ========================================================= */
+========================================================= */
 
 ::-webkit-scrollbar {
   width: 9px;
@@ -244,7 +303,7 @@ p {
 
 /* =========================================================
    REDUCED MOTION
-   ========================================================= */
+========================================================= */
 
 @media (prefers-reduced-motion: reduce) {
   html {
