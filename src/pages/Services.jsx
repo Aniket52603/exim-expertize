@@ -76,11 +76,7 @@ export default function Services() {
           documentation, authorisations and regulatory requirements.
         </p>
 
-        <p className="mx-auto mt-4 max-w-2xl text-xs leading-relaxed text-cream/60 sm:text-sm">
-          Any payment you make will attract GST @ 18% (9% CGST + 9% SGST,
-          or 18% IGST, depending on your area). Please also intimate your
-          GSTIN.
-        </p>
+        
 
         <Link
           to="/contact"
