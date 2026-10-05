@@ -14,6 +14,31 @@
       content="zVtpCVqaCopIBSaccPFa3eZ88Y76yqTsNbqwmb0Ocxo"
     />
 
+    <!-- ================= LCP HERO IMAGE (first, so it gets bandwidth priority) ================= -->
+    <link
+      rel="preload"
+      as="image"
+      type="image/webp"
+      href="/image.webp"
+      fetchpriority="high"
+    />
+
+    <!--
+      OPTIONAL: once you have created public/image-800.webp (an 800px-wide copy),
+      replace the preload above with this one, and add the SAME srcSet/sizes
+      to the <img> in Home.jsx. They must match, or the image downloads twice.
+
+      <link
+        rel="preload"
+        as="image"
+        type="image/webp"
+        href="/image.webp"
+        imagesrcset="/image-800.webp 800w, /image.webp 1600w"
+        imagesizes="100vw"
+        fetchpriority="high"
+      />
+    -->
+
     <!-- ================= FONT PRELOAD (above-the-fold only) ================= -->
     <!-- crossorigin is required for font preloads, even for same-origin files -->
     <link
@@ -30,14 +55,6 @@
       type="font/woff2"
       href="/fonts/Playfair_Display/static/PlayfairDisplay-SemiBold.woff2"
       crossorigin
-    />
-
-    <!-- ================= LCP HERO IMAGE ================= -->
-    <link
-      rel="preload"
-      as="image"
-      href="/image.webp"
-      fetchpriority="high"
     />
 
     <!-- ================= PRIMARY SEO ================= -->

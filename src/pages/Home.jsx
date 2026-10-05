@@ -14,11 +14,18 @@ export default function Home() {
 
         {/* ================= CARGO SHIP WALLPAPER ================= */}
         <div className="absolute inset-0">
+          {/*
+            LCP image. Preloaded in index.html.
+            To use a smaller mobile copy, create public/image-800.webp and add:
+              srcSet="/image-800.webp 800w, /image.webp 1600w"
+              sizes="100vw"
+            The same srcset/sizes must be used in the preload in index.html.
+          */}
           <img
             src="/image.webp"
             alt="Cargo ship and containers at an international port"
             fetchpriority="high"
-            className="h-full w-full object-cover object-[70%_center] opacity-96 sm:object-center"
+            className="h-full w-full object-cover object-[70%_center] sm:object-center"
           />
 
           {/* Readability overlay: mobile/tablet only */}
