@@ -15,7 +15,7 @@ export default function Logo({ dark = false, className = "h-[64px]" }) {
 
         {/* Desktop logo */}
         <img
-          src="/logo.webp"
+          src="/logo1.webp"
           alt="Exim Expertize"
           className={
             "brand-logo " +
