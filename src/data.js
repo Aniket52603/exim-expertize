@@ -16,7 +16,7 @@ export const HILITE = [
 
 export const CONTACT = {
   office:
-    "E-602, Third Floor, S G Business House, Near Bridge, Gota, Ahmedabad 382470",
+    "E-602, Third Floor, S G Business Hub, Near Bridge, Gota, Ahmedabad 382470",
 
   phones: [
      ["Office - Pujan Soni", "7940077484"],

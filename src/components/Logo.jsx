@@ -31,11 +31,11 @@ export default function Logo({ dark = false, className = "h-[64px]" }) {
           (dark ? "text-cream" : "text-ink")
         }
       >
+        HONESTY
+        <br />
         HUMILITY
         <br />
         SINCERITY
-        <br />
-        HONESTY
       </span>
     </Link>
   );
