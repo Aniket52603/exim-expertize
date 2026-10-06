@@ -15,12 +15,17 @@
     />
 
     <!-- LCP HERO IMAGE -->
-    <link
-      rel="preload"
-      as="image"
-      href="/image.webp"
-      fetchpriority="high"
-    />
+    <!-- LCP HERO IMAGE (Home page only) -->
+<script>
+  if (location.pathname === "/") {
+    var l = document.createElement("link");
+    l.rel = "preload";
+    l.as = "image";
+    l.href = "/image.webp";
+    l.setAttribute("fetchpriority", "high");
+    document.head.appendChild(l);
+  }
+</script>
 
     <!-- PRIMARY SEO -->
     <title>
